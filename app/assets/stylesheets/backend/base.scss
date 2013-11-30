@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+// Global definements
+$primaryColor: #000000;
+$secondaryColor: #FFFFFF;
+$tabletSnap: 1200px;
+$phoneSnap: 500px;
+$borderRadius: 35px;
+$mobileNavColor:$primaryColor;
+
+$baseLineHeight: 25px;
+$baseFontSize: 16px;
+$navbarHeight: 56px;
+$navbarBackgroundHighlight: $primaryColor;
+$navbarBackground: darken($navbarBackgroundHighlight, 5%);
+$navbarCollapseWidth: 1200px;
+$textColor: #2e2e2e;
+$lightTextColor: lighten($textColor, 20%);
+$linkColor: $primaryColor;
+$linkColorHover: $linkColor;
+$inputBorderFocus: $primaryColor;
+$textShadow: $primaryColor 1px 1px 2px 1px;
+
+// used in nav
+$navbarTabColor: #FFFFFF;
+$navbarTabColorHover: $primaryColor;
+$navbarTabColorVisited: $navbarTabColorHover;
+$navbarTabColorActive: $navbarTabColorHover;
+
+$navbarFontColor: #777777;
+$navbarFontColorHover: #FFFFFF;
+$navbarFontColorVisited: $navbarFontColor;
+$navbarFontColorActive: $navbarFontColorHover;
+
+$mobileTabMargin: 5px;
+
+// Use bootstrap
+@import 'twitter/bootstrap';
+@import 'twitter/bootstrap';
+@import 'twitter/bootstrap/responsive';
+
+// Global fonts
+@import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600");
+
+// Use FontAwesome
+$fontAwesomePath: "/assets";
+@import "font-awesome";

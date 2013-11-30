@@ -1,0 +1,23 @@
+<div class='row-fluid'>
+  <div class='span12'>
+    <div class='inset'>
+      <div class='row-fluid'>
+        <div class='span12'>
+          <a class='page_jumper' name='<%= paragraph.data['link_title'] %>'>
+            <h3 class='brown'><%= paragraph.link_title if paragraph.link_title.present? %></h3>
+          </a>
+        </div>
+      </div>
+      <div class='row-fluid'>
+        <div class='span8'>
+          <div class='paragraph_text'>
+            <%= paragraph.body.html_safe if paragraph.body.present? %>
+          </div>
+        </div>
+        <div class='span4'>
+          <%= image_tag(paragraph.image.model['file'], style: 'width:100%') if paragraph.image_id.present? %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<% content_for :title do %>
+  Landgasthaus Events
+<% end -%>
+<div class='row'>
+  <div class='span inset'>
+    <%= link_to new_backend_landgasthaus_event_path do %>
+      <div class='btn btn-inverse new_btn'> + Neues Event</div>
+    <% end -%>
+  </div>
+</div>
+<div class='form_row'>
+  <div class='form_panel'>
+    <%= table_for(Event) %>
+  </div>
+</div>

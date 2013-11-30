@@ -1,0 +1,23 @@
+de:
+  activerecord:
+    models:
+      buttons:
+        user:
+          update: "Profil aktualisieren"
+      event: "Veranstaltung"
+      events:
+        html: "<i class='fa fa-user'></i> Events"
+      collage: "Collagen-Layout"
+      flyer: "Flyer-Layout"
+      gallery: "Gallerie"
+      galleries:
+        html: "<i class='fa fa-user'></i> Gallerien"
+      gallery_image: "Galleriebild"
+      gallery_mapping: "Gallerieziweisung"
+      user: Profil
+      users:
+        html: "<i class='fa fa-user'></i> Profil"
+        edit:
+          html: "<i class='fa fa-user'></i> Profil bearbeiten"
+    attributes:
+

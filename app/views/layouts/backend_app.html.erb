@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LandgasthausKoehler</title>
+  <meta name="description" content="Köhlers Landgasthaus" />
+  <meta name="keywords" content="Landgasthaus Koehler" />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <%= stylesheet_link_tag    "backend/application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "backend/application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+  <body style='background-color:#F7F7F7'>
+    <div class='open-nav-slider'>
+      <%= fa_icon "list 2x" %>
+    </div>
+    <div id='nav-wrapper'>
+      <%= render partial: 'layouts/backend/nav' %>
+    </div>
+    <div class='row scaff_row headline'>
+    </div>
+    <% if notice.present? || alert.present? %>
+      <div class='system_message_area'>
+        <% if notice.present? %>
+          <div class="alert alert-success"><%= notice %></div>
+        <% end -%>
+        <% if alert.present? %>
+          <div class="alert alert-error"><%= alert %></div>
+        <% end -%>
+      </div>
+    <% end -%>
+    <div id='content-wrapper'>
+      <div class='yield-container'>
+        <% if content_for :subnav %>
+          <div class='row-fluid sub_nav'>
+            <div class='span12'>
+              <div class='inset'>
+                  <%= content_for :subnav %>
+              </div>
+            </div>
+          </div>
+        <% end -%>
+        <div class='row-fluid'>
+          <div class='span8 offset2'>
+            <div class='left-inset top-inset right-inset'>
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

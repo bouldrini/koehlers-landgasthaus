@@ -1,0 +1,17 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: lghk-web_development
+  pool: 5
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: lghk-web_test
+  pool: 5
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: lghk-web_production
+  pool: 5

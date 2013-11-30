@@ -1,0 +1,31 @@
+<%= simple_form_for [:backend, :landgasthaus ,@gallery] do |f| %>
+    <div class='row'>
+        <div class='span4'>
+            <%= f.input :title %>
+        </div>
+        <div class='span4'>
+            <%= f.input :subtitle %>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='span4'>
+            <%= f.fields_for :gallery_images do |fgi| %>
+                <%= fgi.input :image, label:false, as: :file, input_html: {class: 'multi', name: 'gallery[images][]'} %>
+            <% end -%>
+        </div>
+        <div class='span4'>
+            <div class='gallery_image_present_toogle btn btn-inverse' data-active="false">Gallerie: <i class='icon-chevron-down'></i></div>
+        </div>
+    </div>
+    <div class='row'>
+        <% if @gallery.gallery_images.present? %>
+            <%= render 'gallery_images' %>
+        <% end -%>
+    </div>
+    <div class='row'>
+        <div class='span8'>
+            <%= f.input :description, input_html: {style: 'height:100px; width:100%', class: "wysihtml5-textarea"} %>
+        </div>
+    </div>
+    <%= f.button :submit, class: 'dark_nav_sub_btn' %>
+<% end -%>

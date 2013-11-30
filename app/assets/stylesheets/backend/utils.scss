@@ -1,0 +1,46 @@
+.inset {
+  padding: $baseLineHeight;
+}
+
+.top-inset {
+  padding-top: $baseLineHeight;
+}
+
+.bottom-inset {
+  padding-bottom: $baseLineHeight;
+}
+
+.left-inset {
+  padding-left: $baseLineHeight;
+}
+
+.right-inset {
+  padding-right: $baseLineHeight;
+}
+
+.h-inset {
+  padding-left: $baseLineHeight;
+  padding-right: $baseLineHeight;
+}
+
+.v-inset {
+  padding-top: $baseLineHeight;
+  padding-bottom: $baseLineHeight;
+}
+
+.section {
+  border-bottom: 1px solid $grayLighter;
+  margin-bottom: $baseLineHeight;
+}
+
+.col2 {
+  @include clearfix();
+  .left {
+    float: left;
+    width: 50%;
+  }
+  .right {
+    float: left;
+    width: 50%;
+  }
+}

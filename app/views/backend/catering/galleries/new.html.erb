@@ -1,0 +1,13 @@
+<%= content_for(:title) do %>
+    Neue Gallerie
+<% end -%>
+<div class='row'>
+    <div class='span inset'>
+        <%= link_to backend_catering_galleries_path, style: 'color:black' do %><div class='btn btn-inverse new_btn'>Zur Übersicht</div><% end -%>
+    </div>
+</div>
+<div class='form_row form_panel'>
+  <div class='inset'>
+    <%= render 'form' %>
+  </div>
+</div>

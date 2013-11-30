@@ -1,0 +1,42 @@
+de:
+  activerecord:
+    models:
+      contentr/html_paragraph:  'HTMLAbschnitt'
+      contentr/header_paragraph:  'Kopfzeile'
+      contentr/footer_paragraph:  'Fußzeile'
+      contentr/text_image_paragraph:  'Text / Bild Abschnitt'
+      contentr/teaser_box_paragraph:  'Teaserbox'
+      contentr/html_paragraph_new:  'Neuer HTMLAbschnitt'
+      contentr/header_paragraph_new:  'Neue Kopfzeile'
+      contentr/footer_paragraph_new:  'Neue Fußzeile'
+      contentr/text_image_paragraph_new:  'Neuer Text / Bild Abschnitt'
+      contentr/teaser_box_paragraph_new:  'Neue Teaserbox'
+    attributes:
+      contentr/html_paragraph:
+        body: HTML
+        image: Bild
+      contentr/footer_paragraph:
+        title: Titel
+        body: HTML
+      contentr/header_paragraph:
+        headline: Titel
+        subline: Erläuterungstext
+      contentr/text_image_paragraph:
+        link_title: Titel des Abschnitts
+        body: Textbereich
+        image: Bild
+      contentr/teaser_box_paragraph:
+        image: Bild
+        description: Erläuterungstext
+  contentr:
+    no_unpublished_changes: "Keine Änderungen"
+    publish: "Veröffentlichen!"
+    update_paragraph: "Abschnitt aktualisieren"
+    new_paragraph: "Abschnitt erstellen"
+    revert: "Änderungen verwerfen"
+    published_version: "Veröffentlichte Version"
+    select_paragraph: "Wählen sie einen Typen aus"
+    toolbar:
+      edit_btn: edit icon-white
+      destroy_btn: trash icon-white
+      new_btn: plus icon-white

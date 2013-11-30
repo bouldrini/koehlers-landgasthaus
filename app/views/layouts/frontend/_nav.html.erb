@@ -1,0 +1,23 @@
+<div class='nav-container' data-open='false'>
+  <div class='link_area'>
+    <div class='row'>
+      <div class='navbar_glyph'>
+        <%= image_tag 'navglyph.png' %>
+      </div>
+      <div class='close-nav-slider'>
+      <%= fa_icon "chevron-left 2x" %>
+      </div>
+    </div>
+    <div class='main-nav'>
+      <ul type='none' class='custom_nav'>
+        <%= contentr_site_area :nav %>
+      </ul>
+      <div class='divider_area'>
+        <%= image_tag 'navdivider.png', class: 'navdivider' %>
+      </div>
+    </div>
+    <%= render partial: 'layouts/frontend/yield_nav' %>
+  </div>
+  <div class='close-nav-touch'>
+  </div>
+</div>

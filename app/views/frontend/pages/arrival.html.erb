@@ -1,0 +1,18 @@
+<% content_for :icon do %>
+  <%= fa_icon 'map-marker 2x' %>
+<% end -%>
+<% content_for :title do %>
+  Anfahrt
+<% end -%>
+<%= gmaps("map_options" => {"auto_adjust" => false, "zoom" => 17, "center_latitude" => @lat,"center_longitude" => @lng },"markers" => { "data" => @json }) %>
+
+<script type="text/javascript" charset="utf-8">
+  var disable_poi_layers = [
+    {
+      featureType: "poi",
+      stylers: [
+        { visibility: "off"}
+      ]
+    }
+  ];
+</script>

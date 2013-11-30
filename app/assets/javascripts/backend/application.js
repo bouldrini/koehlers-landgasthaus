@@ -1,0 +1,15 @@
+//= require jquery
+//= require jquery_ujs
+//= require jquery.ui.all
+//= require twitter/bootstrap
+//= require tabulatr
+//= require bootstrap-wysihtml5
+//= require ./page_editor
+//= require ./gallery_image_present
+//= require ./event_manager
+//= require multi_file_uploader
+//= require ajax_uploader
+//= require minicolors
+//= require ./dark_nav
+//= require ./navbar
+//= require jquery.slides.js

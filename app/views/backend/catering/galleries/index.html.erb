@@ -1,0 +1,15 @@
+<%= content_for(:title) do %>
+	Gallerien
+<% end -%>
+<div class='row'>
+	<div class='span inset'>
+		<%= link_to new_backend_catering_gallery_path do %>
+			<div class='btn btn-inverse new_btn'> + Neue Gallerie</div>
+		<% end -%>
+	</div>
+</div>
+<div class='form_row form_panel'>
+	<div class='inset'>
+		<%= render partial: 'backend/catering/galleries/gallery_schedule', locals: {galleries: @galleries} %>
+	</div>
+</div>

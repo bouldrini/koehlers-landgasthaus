@@ -1,0 +1,259 @@
+@charset "UTF-8";
+
+.btn-group{
+  width:100%
+}
+
+
+.dropdown-toggle{
+  height:33px !important;
+  line-height:33px !important;
+}
+
+.custom_brand{
+  margin-bottom:20px !important;
+}
+
+.frontend_tab{
+  font-size: 15px !important;
+  font-weight: bold !important;
+}
+
+.navbar {
+  margin-bottom: 0;
+
+  .navbar-inner {
+    padding: 0 $baseLineHeight / 2;
+  }
+
+
+  //
+  // Transparent navbar theme
+  //
+  &.navbar-transparent {
+    .navbar-inner{
+      padding:0!important;
+      @media (min-width: $navbarCollapseWidth){
+        .nav{
+          margin-bottom:0px !important;
+        }
+      }
+      .nav{
+        margin-bottom:$mobileTabMargin;
+        li.active{
+          a{
+            color: #FFFFFF !important;
+            background-color: $navbarTabColorActive !important;
+          }
+        }
+        li.open{
+          background-color: $navbarTabColorActive !important;
+          margin-bottom:0px !important;
+          a{
+            color: $navbarFontColorActive !important;
+            background-color: $navbarTabColorActive !important;
+            margin-bottom: 0px !important;
+          }
+          ul{
+            padding-bottom: 0px !important;
+            padding-top: 0px !important;
+            background-color:$navbarTabColorHover !important;
+            li{
+              margin-top:0px !important;
+              a{
+                margin-bottom: 0px !important;
+                color:$navbarFontColor !important;
+                background-color:$navbarTabColor !important;
+                text-shadow: $navbarTabColorHover 0px 0.9090908765792847px 0px !important;
+                background-image:none !important;
+                height:25px !important;
+                line-height:25px !important;
+                padding:3px 20px !important;
+              }
+              a:hover{
+                color: $navbarFontColorHover !important;
+                background-color:$navbarTabColorHover !important;
+              }
+              a:visited{
+                color: $navbarFontColorVisited;
+                background-color: $navbarTabColorVisited;
+              }
+            }
+            li.active{
+              a{
+                color: $navbarFontColorActive !important;
+                background-color: $navbarTabColorActive !important;
+              }
+            }
+          }
+        }
+        @media (max-width: $navbarCollapseWidth){
+          li{
+            margin-top:$mobileTabMargin !important;
+            a{
+              height: 40px !important;
+              line-height: 40px !important;
+            }
+          }
+        }
+        @media (min-width: $navbarCollapseWidth){
+          li{
+            // margin-top:$mobileTabMargin !important;
+            a{
+              height: 80px !important;
+              line-height: 80px !important;
+            }
+          }
+        }
+        li{
+          a{
+            margin-bottom:0px;
+            color: $navbarFontColor !important;
+            background-color:$navbarTabColor !important;
+            padding-top:0px !important;
+            text-shadow: $navbarTabColorHover 0px 0.9090908765792847px 0px !important;
+            padding-bottom:0px !important;
+            border-radius:0 !important;
+          }
+          a:hover{
+            color: $navbarFontColorHover !important;
+            background-color:$navbarTabColorHover !important;
+          }
+          a:visited{
+            color: $navbarFontColorVisited;
+            background-color: $navbarTabColorVisited;
+          }
+          // remove the freaking arrow from dropdown -.-
+          .dropdown-menu:before{
+            display: none !important;
+          }
+          .dropdown-menu:after{
+            display: none !important;
+          }
+        }
+      }
+    }
+    .navbar-inner {
+      @include box-shadow(none);
+      background: none;
+      border: none;
+    }
+
+    .nav-tabs {
+      border: none;
+      > li {
+        margin-bottom: 0;
+      }
+    }
+    .nav > li > a,
+    .nav > li > a:focus,
+    .nav > li > a:hover {
+      border: none;
+    }
+
+    .nav > .active > a,
+    .nav > .active > a:hover,
+    .nav > .active > a:focus {
+      @include box-shadow(none);
+      @include border-radius(0);
+      border: none;
+      background-color: transparent;
+    }
+  }
+}
+
+form {
+  .form-actions {
+    &.clear {
+      background: none;
+      border: none;
+      margin: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .help-block {
+    font-style: italic;
+    font-size: 90%;
+  }
+
+  select,
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"],
+  .input-append .add-on,
+  .input-prepend .add-on,
+  .uneditable-input {
+    padding: 8px;
+  }
+
+  textarea:focus,
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="date"]:focus,
+  input[type="month"]:focus,
+  input[type="time"]:focus,
+  input[type="week"]:focus,
+  input[type="number"]:focus,
+  input[type="email"]:focus,
+  input[type="url"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="color"]:focus,
+  .uneditable-input:focus {
+    border-color: rgba($inputBorderFocus, .8);
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0, .075), 0 0 8px rgba($inputBorderFocus, .6));
+  }
+
+  legend {
+    font-family: 'Open Sans Condensed', $sansFontFamily;
+    border: none;
+    margin: 0;
+    padding: 0;
+    line-height: $baseLineHeight;
+    font-weight: normal;
+    width: auto;
+  }
+
+  &.form-horizontal {
+    legend {
+      padding-left: 180px;
+    }
+  }
+
+}
+
+.alert {
+  text-align: center;
+}
+
+@media all and (max-width: 979px) and (min-width: 768px) {
+  .navbar .navbar-inner .nav > li > a > span.hidden-desktop {
+    display: inline !important;
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    &.form-horizontal {
+    legend {
+      padding-left: 0;
+    }
+  }
+  }
+}

@@ -1,0 +1,22 @@
+<% content_for :title do %>
+  Login
+<% end -%>
+<% content_for :subnav do %>
+  <%= link_to root_path do %>
+    <div class='btn btn-inverse btn-small'><i class='fa fa-home'></i> Frontend</div>
+  <% end -%>
+<% end -%>
+<div class='row-fluid'>
+  <div class='span12'>
+    <%= simple_form_for :user do |f| %>
+      <%= f.input :email, input_html: {class: 'span6'} %>
+      <%= f.input :password, input_html: {class: 'span6'} %>
+      <% if devise_mapping.rememberable? -%>
+          <%= f.input :remember_me, as: :boolean, wrapper: :inline_checkbox %>
+      <% end -%>
+      <div class='well centered'>
+        <%= f.submit 'Anmelden', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+  </div>
+</div>

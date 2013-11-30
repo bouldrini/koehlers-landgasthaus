@@ -1,0 +1,5 @@
+de:
+  cancel: "Abbrechen"
+  index: "Übersicht"
+  logout:
+    html: "<i class='fa fa-power-off'></i> Ausloggen"

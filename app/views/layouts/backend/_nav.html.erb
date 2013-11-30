@@ -1,0 +1,41 @@
+<div class='nav-container' data-open='false'>
+  <% if current_user %>
+    <div class='link_area'>
+      <div class='row'>
+        <div class='navbar_glyph'>
+          <%= image_tag 'navglyph.png' %>
+        </div>
+        <div class='close-nav-slider'>
+        <%= fa_icon "chevron-left 2x" %>
+        </div>
+      </div>
+      <div class='main-nav'>
+        <ul type='none' class='custom_nav'>
+          <li>
+            <a class='dropdown-toogle' data-open='false' id='landgasthaus'><i class='fa fa-chevron-down'></i>&nbsp;&nbsp;Landgasthaus</a>
+            <ul type='none' class='dropdown' id='landgasthaus'>
+              <li><%= link_to t('activerecord.models.galleries.html'), backend_landgasthaus_galleries_path() %></li>
+              <li><%= link_to t('activerecord.models.events.html'), backend_landgasthaus_events_path() %></li>
+            </ul>
+          </li>
+          <li>
+            <a class='dropdown-toogle' data-open='false' id='catering'><i class='fa fa-chevron-down'></i>&nbsp;&nbsp;Catering</a>
+            <ul type='none' class='dropdown' id='catering'>
+              <li><%= link_to t('activerecord.models.galleries.html'), backend_catering_galleries_path() %></li>
+              <li><%= link_to t('activerecord.models.events.html'), backend_catering_events_path() %></li>
+            </ul>
+          </li>
+          <li>
+            <a class='dropdown-toogle' data-open='false' id='system'><i class='fa fa-chevron-down'></i>&nbsp;&nbsp;System</a>
+            <ul type='none' class='dropdown' id='system'>
+              <li><%= link_to t('activerecord.models.users.html') , edit_user_registration_path() %></li>
+              <li><%= link_to t('logout.html'), destroy_user_session_path(), method: :delete %></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  <% end -%>
+  <div class='close-nav-touch'>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<%= table_for Gallery do |t|
+  t.column :title, :align => 'left', :header => 'Titel'
+  t.column :description, :align => 'left', :header => 'Beschreibung' do |gallery|
+    range=100
+    "#{gallery.description[0..range]}#{gallery.description.length > range ? '...' : ''}"
+  end
+  t.association :gallery_images, :count, :align => 'left', :header => 'Bilder'
+  t.action width:'5%', align: 'center' do |record|
+    link_to backend_catering_gallery_path(record), method: :delete do %>
+      <div class='btn btn-danger'><i class='icon-trash'></i></div>
+    <% end
+  end
+  t.action width:'5%', align: 'center' do |record|
+    link_to edit_backend_catering_gallery_path(record) do %>
+      <div class='btn'><i class='icon-edit'></i></div>
+    <% end
+  end
+end %>

@@ -1,0 +1,136 @@
+@import './frontend/base';
+$contentrBtnColor: #000000;
+.contentr-area{
+  position: relative !important;
+  width:100% !important;
+  margin-left:0 !important;
+  margin-top:0 !important;
+  .toolbar{
+    padding-left:0;
+    padding-right:0;
+    background-color:#000000;
+    border:none;
+    .btn_area{
+      text-align:right;
+    }
+    .row-fluid{
+      .span10{
+        min-height:10px !important;
+      }
+      .span2{
+        min-height:10px !important;
+      }
+    }
+    @media (min-width:1200px){
+      .btn-mini{
+        min-width:20px;
+        height:17px !important;
+        box-sizing:border-box;
+        line-height:17px !important;
+      }
+    }
+    @media (max-width:1200px){
+      .span2{
+        margin-left:0px;
+        width:100%;
+      }
+      .span10{
+        width:100%;
+      }
+      .btn-mini{
+        box-sizing:border-box;
+        width:100% !important;
+        height:17px !important;
+        line-height:17px !important;
+      }
+    }
+    .area-name{
+      margin-left:10px;
+      color: #FFFFFF;
+      text-shadow:none;
+    }
+    .page-classname{
+      color: #FFFFFF;
+      text-shadow:none;
+    }
+    .page-urlpath{
+      color: #FFFFFF;
+      text-shadow:none;
+    }
+    .handle{
+      margin-left:10px;
+      text-shadow:none;
+      color:#FFFFFF;
+    }
+  }
+  .paragraph{
+    .paragraph_text{
+      padding-top:25px;
+    }
+    .toolbar{
+      background-color:#000000;
+      border:none;
+      border-top:1px solid white;
+    }
+  }
+}
+#contentr-style-node{
+  .control-label{
+    text-align: left;
+    font-size:12px;
+    font-weight:bold;
+  }
+  @media (max-width: 1200px){
+    .centered{
+      text-align: center;
+    }
+    .span6{
+      width:100%;
+    }
+  }
+  .navbar{
+    background-color: #000000;
+    border-radius:0px !important;
+    .navbar-inner{
+      padding:0!important;
+
+      .brand{
+        color: #FFFFFF;
+        text-shadow:none;
+        margin-left: $baseLineHeight;
+      }
+      .nav{
+        margin-bottom:$mobileTabMargin !important;
+        li{
+          display:none;
+        }
+      }
+    }
+    .navbar-inner {
+      @include box-shadow(none);
+      background: none;
+      border: none;
+    }
+
+    .nav-tabs {
+      border: none;
+      > li {
+        margin-bottom: 0;
+      }
+    }
+    .nav > li > a,
+    .nav > li > a:focus,
+    .nav > li > a:hover {
+      border: none;
+    }
+
+    .nav > .active > a,
+    .nav > .active > a:hover,
+    .nav > .active > a:focus {
+      @include box-shadow(none);
+      @include border-radius(0);
+      border: none;
+      background-color: transparent;
+    }
+  }
+}
