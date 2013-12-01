@@ -1,4 +1,4 @@
-class DefaultMigration < ActiveRecord::Migration
+class Default < ActiveRecord::Migration
   def change
     create_table :users do |t|
       t.string :email,              :null => false, :default => ""
@@ -84,6 +84,51 @@ class DefaultMigration < ActiveRecord::Migration
 
     create_table :statistics do |t|
       t.integer :count_requests
+    end
+
+    create_table :files do |t|
+      t.string 'description'
+      t.string 'slug'
+      t.string 'file'
+      t.timestamps
+    end
+
+    create_table :pages do |t|
+      t.string 'name'
+      t.string 'slug'
+      t.string 'url_path'
+      t.integer 'position'
+      t.boolean 'menu_only'
+      t.string 'type'
+      t.string 'ancestry'
+      t.string 'description'
+      t.string 'menu_title'
+      t.boolean 'published', default: false
+      t.boolean 'hidden', default: false
+      t.string 'layout', default: "application"
+      t.string 'template', default: "default"
+      t.string 'linked_to'
+      t.timestamps
+    end
+    add_index :pages, :ancestry
+    add_index :pages, :published
+    add_index :pages, :hidden
+
+    create_table :paragraphs do |t|
+      t.string 'area_name'
+      t.integer 'position'
+      t.string 'type'
+      t.text 'data'
+      t.text 'unpublished_data'
+      t.references 'page'
+      t.timestamps
+    end
+
+    create_table :image_assets do |t|
+      t.string 'file'
+      t.string 'file_unpublished'
+      t.string 'type'
+      t.timestamps
     end
   end
 end
