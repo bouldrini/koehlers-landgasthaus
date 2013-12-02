@@ -33,9 +33,6 @@ body.noscroll{
   height:100%;
 }
 @media (max-width: $phoneSnap){
-  .headline{
-    display: block !important;
-  }
   body{
     height:100% !important;
     padding:0 !important;
@@ -48,6 +45,7 @@ body.noscroll{
     margin-left:0px !important;
   }
   .headline{
+    display: block !important;
     height:50px !important;
     border-top-left-radius:0px;
     border-top-right-radius:0px;

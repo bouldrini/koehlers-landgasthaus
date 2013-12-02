@@ -134,7 +134,7 @@ task :create_default_page_configuration => :environment do
 
   gastrokalender = Contentr::LinkedPage.new()
   gastrokalender.name = "Gastrokalender"
-  gastrokalender.slug = "landgasthaus/gastrokalender"
+  gastrokalender.slug = "landgasthaus/gastrokalender".parameterize
   gastrokalender.menu_only = nil
   gastrokalender.type = "Contentr::LinkedPage"
   gastrokalender.ancestry = nil
