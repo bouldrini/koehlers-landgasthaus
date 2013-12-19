@@ -1,0 +1,141 @@
+/* line 22, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+.tabulatr-sort {
+  opacity: 0.3;
+}
+
+/* line 26, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+.tabulatr-sort:hover {
+  cursor: pointer;
+}
+
+/* line 30, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+.sorted {
+  opacity: 1;
+}
+
+/* line 34, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+i.tabulatr_remove_filter:hover {
+  cursor: pointer;
+}
+
+/* line 38, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+.tabulatr_filtered_column {
+  text-decoration: underline;
+}
+
+/* line 42, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+.tabulatr-per-page {
+  margin: 20px 10px;
+}
+/* line 44, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+.tabulatr-per-page a.active {
+  background-color: red;
+}
+
+/* line 49, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+.table-controls div {
+  margin: 20px 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* line 55, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+.table-controls i, .tabulatr_table i {
+  margin-right: 5px;
+}
+
+/* line 59, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+.table-controls .form-inline {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+
+/* line 65, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+#tabulatr-wrench {
+  margin-left: 10px;
+}
+
+/* line 69, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+.pagination {
+  margin: 20px;
+  vertical-align: middle;
+}
+
+/* line 74, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+.pagination_trigger {
+  width: 1px;
+  height: 1px;
+  position: relative;
+  float: left;
+  opacity: 1;
+}
+
+/* line 82, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+div[data-filter-column-name] {
+  display: none;
+}
+
+/* line 86, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+th.tabulatr-sortable {
+  cursor: pointer;
+}
+/* line 92, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+th.tabulatr-sortable.sorted[data-sorted=asc]:after {
+  content: " \25B2";
+  margin-left: 5px;
+}
+/* line 99, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+th.tabulatr-sortable.sorted[data-sorted=desc]:after {
+  content: " \25BC";
+  margin-left: 5px;
+}
+
+/* line 109, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+table.tabulatr_table td[align=right], table.tabulatr_table th[align=right] {
+  text-align: right;
+}
+/* line 113, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+table.tabulatr_table td[align=center], table.tabulatr_table th[align=center] {
+  text-align: center;
+}
+
+/* line 119, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+.tabulatr-table-controls-wrapper {
+  display: block;
+  padding-top: 10px;
+}
+/* line 123, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+.tabulatr-table-controls-wrapper .tabulatr-filter-menu-wrapper {
+  display: inline-block;
+  padding: 20px 0 20px 0;
+}
+/* line 128, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+.tabulatr-table-controls-wrapper .tabulatr-batch-actions-menu-wrapper {
+  display: inline-block;
+  padding: 20px 0 20px 20px;
+}
+/* line 133, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+.tabulatr-table-controls-wrapper .tabulatr-paginator-wrapper {
+  display: inline-block;
+  padding: 0;
+}
+/* line 138, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+.tabulatr-table-controls-wrapper .tabulatr-info-string-wrapper {
+  display: inline-block;
+  padding: 20px 20px 20px 0;
+}
+/* line 143, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+.tabulatr-table-controls-wrapper .tabulatr-fuzzy-search-field-wrapper {
+  display: inline-block;
+  float: right;
+  padding: 20px 0 20px 0;
+}
+/* line 149, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+.tabulatr-table-controls-wrapper .tabulatr-filter-dialog-wrapper {
+  display: block;
+}
+/* line 152, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/tabulatr2-1a37e69008ae/app/assets/stylesheets/tabulatr/application.css.scss */
+.tabulatr-table-controls-wrapper .tabulatr-filter-dialog-wrapper .submit-table {
+  z-index: 2;
+}
