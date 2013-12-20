@@ -14,16 +14,9 @@ GIT
       railties (>= 3.0)
 
 GIT
-  remote: https://github.com/provideal/tabulatr2
-  revision: dc1edfbc1bc6f857760f32b71a172b84968521d0
-  specs:
-    tabulatr2 (0.8.9)
-      activerecord_outer_joins (~> 0.0.1)
-      rails (>= 4.0.0)
-      slim (>= 2.0.1)
-
-PATH
-  remote: ~/code/contentr
+  remote: https://github.com/RichardWieditz/contentr.git
+  revision: 8002ff193ecf0971aa7aa0c21c06697bd2f1e483
+  branch: uptodate
   specs:
     contentr (0.1.0)
       ancestry
@@ -35,6 +28,15 @@ PATH
       sass-rails
       simple_form (~> 3.0.0)
       tabulatr2
+
+GIT
+  remote: https://github.com/provideal/tabulatr2
+  revision: dc1edfbc1bc6f857760f32b71a172b84968521d0
+  specs:
+    tabulatr2 (0.8.9)
+      activerecord_outer_joins (~> 0.0.1)
+      rails (>= 4.0.0)
+      slim (>= 2.0.1)
 
 GEM
   remote: https://rubygems.org/
