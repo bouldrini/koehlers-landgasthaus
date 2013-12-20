@@ -1,5 +1,18 @@
 @import './frontend/base';
 $contentrBtnColor: #000000;
+#contentr-overlay-close{
+  background:none !important;
+  background-color: white !important;
+  cursor: pointer !important;
+  border-radius: 5px !important;
+  text-align: center !important;
+  height:30px !important;
+  width:30px !important;
+  line-height: 30px !important;
+  border:2px solid black !important;
+  color: black !important;
+  font-weight:bold;
+}
 .contentr-area{
   position: relative !important;
   width:100% !important;
