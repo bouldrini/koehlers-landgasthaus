@@ -10,9 +10,17 @@ LandgasthausKoehler::Application.routes.draw do
 
   scope module: 'frontend' do
     namespace :landgasthaus do
+      get '/hotel', to: 'pages#hotel'
+      get '/erholungundkultur', to: 'pages#erholungundkultur'
+      get '/feierlichkeiten', to: 'pages#feierlichkeiten'
+      get '/hausgemachtes', to: 'pages#hausgemachtes'
+      get '/kids', to: 'pages#kids'
       get '/gastrokalender', to: 'pages#gastrokalender'
     end
     namespace :catering do
+      get '/allgemeines', to: 'pages#allgemeines'
+      get '/gemeinschaftspflege', to: 'pages#gemeinschaftspflege'
+      get '/bilder', to: 'pages#bilder'
     end
     get '/home', to: 'pages#home', as: :home
     get '/impressum', to: 'pages#impressum', as: :impressum
