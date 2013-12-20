@@ -37,6 +37,6 @@ de:
     published_version: "Veröffentlichte Version"
     select_paragraph: "Wählen sie einen Typen aus"
     toolbar:
-      edit_btn: edit icon-white
-      destroy_btn: trash icon-white
-      new_btn: plus icon-white
+      edit_btn: edit fa-white
+      destroy_btn: trash-o fa-white
+      new_btn: plus fa-white
