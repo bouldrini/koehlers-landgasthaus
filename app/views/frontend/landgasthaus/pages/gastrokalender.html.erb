@@ -29,18 +29,20 @@
 <script type="text/javascript">
 jQuery(function($){
   var events = [
-    <% @events.each_with_index do |e, i| %>
-    {
-      title: "<%= e.title %>",
-      subtitle: "<%= e.subtitle %>",
-      image: "<%= e.image %>",
-      body: "<%= e.body.html_safe %>",
-      highlight: "<%= e.highlight %>",
-      start: "<%= e.start_at %>",
-      end:   "<%= e.end_at %>",
-      formatted_start: "<%= e.start_at.strftime('dd.mm.YY') %>",
-      formatted_end:   "<%= e.end_at.strftime('dd.mm.YY') %>"
-    }<%= "," unless i >= @events.length %>
+    <% if @events.present? %>
+      <% @events.each_with_index do |e, i| %>
+      {
+        title: "<%= e.title %>",
+        subtitle: "<%= e.subtitle %>",
+        image: "<%= e.image %>",
+        body: "<%= e.body.present? ? e.body.html_safe : '' %>",
+        highlight: "<%= e.highlight %>",
+        start: "<%= e.start_at %>",
+        end:   "<%= e.end_at %>",
+        formatted_start: "<%= e.start_at.strftime('dd.mm.YY') %>",
+        formatted_end:   "<%= e.end_at.strftime('dd.mm.YY') %>"
+      }<%= "," unless i >= @events.length %>
+      <% end -%>
     <% end -%>
   ]
   calendar(events);
