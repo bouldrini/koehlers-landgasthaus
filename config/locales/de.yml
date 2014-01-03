@@ -4,6 +4,8 @@ de:
       buttons:
         user:
           update: "Profil aktualisieren"
+          edit:
+            html: "<i class='fa fa-user'></i>&nbsp;&nbsp;Profil bearbeiten"
       event: "Veranstaltung"
       events:
         html: "<i class='fa fa-user'></i> Events"
@@ -20,4 +22,18 @@ de:
         edit:
           html: "<i class='fa fa-user'></i> Profil bearbeiten"
     attributes:
-
+      user:
+        email: "Email-Adresse"
+        current_password: "Aktuelles Passwort"
+        password: Neues Passwort
+        password_confirmation: "Passwort bestätigen"
+      event:
+        title: Titel
+        type: Typ
+        subtitle: Untertitel
+        body: Textbereich
+        active: aktiv?
+        highlight: hervorgehoben?
+        flyer: Flyer
+        collage: Collage
+        image: Bild

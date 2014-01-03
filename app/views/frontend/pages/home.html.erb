@@ -4,3 +4,23 @@
 <% content_for :title do %>
   Startseite
 <% end -%>
+<script type="text/javascript">
+  jQuery(function($){
+    events = [
+      <% @events.each_with_index do |e, i| %>
+        {
+        id: "<%= i %>",
+        title: "<%= e.title %>",
+        subtitle: "<%= e.subtitle %>",
+        start_at: "<%= nicedate(e.start_at) %>",
+        end_at: "<%= nicedate(e.end_at) %>",
+        image: "<%= e.image_url %>",
+        body: "<%= e.body.html_safe %>",
+        highlight: "<%= e.highlight %>"
+        }
+        <%= ',' unless i >= (@events.length + 1) %>
+      <% end %>
+    ]
+    typographical_effects(events)
+  })
+</script>

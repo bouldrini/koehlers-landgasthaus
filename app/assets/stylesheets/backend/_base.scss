@@ -20,6 +20,7 @@ $linkColor: $primaryColor;
 $linkColorHover: $linkColor;
 $inputBorderFocus: $primaryColor;
 $textShadow: $primaryColor 1px 1px 2px 1px;
+$highlightColor: darken(#74B9EF, 30%);
 
 // used in nav
 $navbarTabColor: #FFFFFF;
@@ -40,8 +41,8 @@ $mobileTabMargin: 5px;
 @import 'twitter/bootstrap/responsive';
 
 // Global fonts
-@import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600");
+// @import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700");
+// @import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600");
 
 // Use FontAwesome
 $fontAwesomePath: "/assets";

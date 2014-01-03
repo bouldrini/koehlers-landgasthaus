@@ -2,7 +2,8 @@
   <div class='row-fluid'>
     <% @paragraph.class.form_fields.each do |ff| %>
       <% label = @paragraph.class.human_attribute_name(ff[:name]) %>
-      <%= f.input ff[:name], as: ff[:typ], :label => label, :label_html => { :style => "float:none; text-align:left" }, input_html: {class: 'span6'} %>
+      <% rows = (ff[:name].to_s == 'body' ? 15 : nil ) %>
+      <%= f.input ff[:name], as: ff[:typ], :label => label, :label_html => { :style => "float:none; text-align:left" }, input_html: {class: "span6 #{(ff[:name].to_s == 'body') ? 'html_editor' : ''}", rows: rows} %>
       <% if ff[:typ] == :file && @paragraph.image.present? %>
       Remove current image: <input type="checkbox" name="paragraph[remove_image]" value="<%= ff[:name] %>">
       <% end %>

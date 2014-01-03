@@ -1,11 +1,6 @@
 <% content_for :title do %>
   <%= t('activerecord.models.buttons.user.edit.html') %>
 <% end -%>
-<% content_for :subnav do %>
-  <%= link_to root_path do %>
-    <div class='btn btn-inverse btn-small'><i class='fa fa-home'></i> Frontend</div>
-  <% end -%>
-<% end -%>
 <div class='row-fluid'>
   <div class='span12'>
     <%= simple_form_for(resource, :as => resource_name, :url=>{:action=>"update"}) do |f| %>

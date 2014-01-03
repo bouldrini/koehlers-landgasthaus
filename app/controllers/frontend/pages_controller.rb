@@ -1,4 +1,5 @@
 class Frontend::PagesController < Frontend::ApplicationController
+  before_filter :globalize_events
   def home
   end
   def arrival
@@ -16,4 +17,8 @@ class Frontend::PagesController < Frontend::ApplicationController
   end
   def playground
   end
+  protected
+    def globalize_events
+      @events = Event.all[0...3]
+    end
 end

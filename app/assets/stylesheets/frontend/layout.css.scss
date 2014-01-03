@@ -1,3 +1,32 @@
+#calendar{
+  .fc-event{
+    cursor:pointer;
+  }
+}
+.event_box{
+  position: fixed;
+  height:400px;
+  width:300px;
+  right:-100%;
+  top:25%;
+  border-top-left-radius: $borderRadius;
+  border-bottom-left-radius: $borderRadius;
+  border: 3px solid $primaryColor;
+  background-color: white;
+  padding:$baseLineHeight;
+  .event_title{
+    width:100%;
+  }
+  .event_subtitle{
+    width:100%;
+  }
+  .event_image{
+    width:100%;
+  }
+  .event_body{
+    width:100%;
+  }
+}
 .headline{
   background-color: $primaryColor;
   height:$borderRadius * 3;

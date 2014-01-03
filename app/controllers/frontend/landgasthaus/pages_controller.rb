@@ -1,5 +1,6 @@
 class Frontend::Landgasthaus::PagesController < Frontend::Landgasthaus::ApplicationController
   def gastrokalender
+    @events = Event.all
   end
   def hotel
   end

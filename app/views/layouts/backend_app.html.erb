@@ -32,15 +32,25 @@
     <% end -%>
     <div id='content-wrapper'>
       <div class='yield-container'>
-        <% if content_for :subnav %>
-          <div class='row-fluid sub_nav'>
+        <% if content_for :title %>
+          <div class='row-fluid'>
             <div class='span12'>
               <div class='inset'>
-                  <%= content_for :subnav %>
+                <h4 class='red'><%= content_for :title %></h4>
               </div>
             </div>
           </div>
         <% end -%>
+        <div class='row-fluid sub_nav'>
+          <div class='span12'>
+            <div class='inset'>
+              <%= link_to root_path do %>
+                <div class='btn btn-inverse btn-small'><i class='fa fa-home'></i> Frontend</div>
+              <% end -%>
+              <%= content_for :subnav %>
+            </div>
+          </div>
+        </div>
         <div class='row-fluid'>
           <div class='span8 offset2'>
             <div class='left-inset top-inset right-inset'>

@@ -1,20 +1,23 @@
-<div class='inset'>
-  <div class='row'>
-    <div class='span3 offset6'>
-      <%= simple_form_for [:backend, :landgasthaus, @event] do |f| %>
-        <%= f.input :title %>
-        <%= f.input :type, collection: ['Collage', 'Flyer'], label: 'Flyer', default: 1, input_html: {class: 'area_control chosen'} %>
-        <div class='flyer_control'>
-          <%= f.input :image, as: :file %>
-        </div>
-        <div class='collage_control'>
-          <%= f.input :subtitle %>
-          <%= f.input :body, input_html: {class: 'html_editor'} %>
-        </div>
-        <div class='submit_control'>
-          <%= f.submit "Event anlegen", class: 'btn btn-primary dark_nav_sub_btn' %>
-        </div>
-      <% end -%>
-    </div>
+<%= content_for(:subnav) do %>
+  <%= link_to backend_landgasthaus_events_path, style: 'color:black' do %><div class='btn btn-inverse btn-small'>Zur Übersicht</div><% end -%>
+<% end -%>
+<div class='row-fluid'>
+  <div class='span12'>
+    <%= simple_form_for [:backend, :landgasthaus, @event.becomes(Event)] do |f| %>
+      <%= f.input :title, input_html: {class: 'span12'} %>
+      <%= f.input :start_at, as: :datepicker, input_html: {class: 'span12', value: @event.start_at.presence || 'Startdatum wählen'} %>
+      <%= f.input :end_at, as: :datepicker, input_html: {class: 'span12', value: @event.end_at.presence || 'Enddatum wählen (optional)'} %>
+      <%= f.input :type, collection: Event::TYPES.map(&:capitalize), default: @event.type || 0, input_html: {class: 'area_control chosen span12'} %>
+      <div class='flyer_control'>
+        <%= f.input :image, as: :image_upload, input_html: {class: 'span12'} %>
+      </div>
+      <div class='collage_control'>
+        <%= f.input :subtitle, input_html: {class: 'span12'} %>
+        <%= f.input :body, input_html: {class: 'html_editor span12', rows: 15} %>
+      </div>
+      <div class='submit_control well centered'>
+        <%= f.submit class: 'btn btn-primary btn-small' %>
+      </div>
+    <% end -%>
   </div>
 </div>

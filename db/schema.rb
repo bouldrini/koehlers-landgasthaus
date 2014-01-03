@@ -16,12 +16,14 @@ ActiveRecord::Schema.define(version: 20131201000619) do
   create_table "events", force: true do |t|
     t.string   "title"
     t.string   "type"
+    t.string   "area"
     t.string   "subtitle"
+    t.datetime "start_at"
+    t.datetime "end_at"
+    t.string   "image"
     t.text     "body"
     t.boolean  "active"
     t.boolean  "highlight"
-    t.boolean  "flyer"
-    t.boolean  "collage"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

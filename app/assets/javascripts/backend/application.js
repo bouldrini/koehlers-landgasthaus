@@ -4,7 +4,8 @@
 //= require twitter/bootstrap
 //= require tabulatr
 //= require bootstrap-wysihtml5
-//= require ./page_editor
+//= require chosen-jquery
+//= require ./alert_fader
 //= require ./gallery_image_present
 //= require ./event_manager
 //= require multi_file_uploader
@@ -12,4 +13,7 @@
 //= require minicolors
 //= require ./dark_nav
 //= require ./navbar
+//= require ./moment.min
+//= require ./bootstrap-datepicker
 //= require jquery.slides.js
+//= require ./initializer

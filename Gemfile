@@ -7,8 +7,9 @@ gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails'
 gem 'turbolinks'
+gem 'jquery-ui-rails'
 gem 'bootstrap-sass-rails',    '~> 2.2.2.0'
-gem 'contentr', git: 'https://github.com/RichardWieditz/contentr.git', branch: 'activerecord'
+gem 'contentr', path: '../contentr'#git: 'https://github.com/RichardWieditz/contentr.git', branch: 'activerecord'
 gem 'simple_form'
 gem 'cruddler',                  github: 'provideal/cruddler',          branch: 'rails4'
 gem 'slim'
@@ -31,6 +32,7 @@ gem 'chosen-rails', "~> 1.0.0"
 gem 'iconv'
 gem 'compass-rails'
 gem 'quiet_assets'
+gem 'fullcalendar-rails'
 gem "font-awesome-rails"
 
 group :development do

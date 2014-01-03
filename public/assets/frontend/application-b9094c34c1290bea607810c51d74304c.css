@@ -1,7 +1,108 @@
-@import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700");
-@import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600");
+ul.wysihtml5-toolbar {
+	margin: 0;
+	padding: 0;
+	display: block;
+}
+
+ul.wysihtml5-toolbar::after {
+	clear: both;
+	display: table;
+	content: "";
+}
+
+ul.wysihtml5-toolbar > li {
+	float: left;
+	display: list-item;
+	list-style: none;
+	margin: 0 5px 10px 0;
+}
+
+ul.wysihtml5-toolbar a[data-wysihtml5-command=bold] {
+	font-weight: bold;
+}
+
+ul.wysihtml5-toolbar a[data-wysihtml5-command=italic] {
+	font-style: italic;
+}
+
+ul.wysihtml5-toolbar a[data-wysihtml5-command=underline] {
+	text-decoration: underline;
+}
+
+ul.wysihtml5-toolbar a.btn.wysihtml5-command-active {
+	background-image: none;
+	-webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15),0 1px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15),0 1px 2px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15),0 1px 2px rgba(0, 0, 0, 0.05);
+	background-color: #E6E6E6;
+	background-color: #D9D9D9;
+	outline: 0;
+}
+
+ul.wysihtml5-commands-disabled .dropdown-menu {
+	display: none !important;
+}
+
+ul.wysihtml5-toolbar div.wysihtml5-colors {
+  display:block;
+  width: 50px;
+  height: 20px;
+  margin-top: 2px;
+  margin-left: 5px;
+  position: absolute;
+  pointer-events: none;
+}
+
+ul.wysihtml5-toolbar a.wysihtml5-colors-title {
+  padding-left: 70px;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="black"] {
+  background: black !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="silver"] {
+  background: silver !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="gray"] {
+  background: gray !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="maroon"] {
+  background: maroon !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="red"] {
+  background: red !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="purple"] {
+  background: purple !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="green"] {
+  background: green !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="olive"] {
+  background: olive !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="navy"] {
+  background: navy !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="blue"] {
+  background: blue !important;
+}
+
+ul.wysihtml5-toolbar div[data-wysihtml5-command-value="orange"] {
+  background: orange !important;
+}
+/*
+
+*/
 /*!
  * Bootstrap v2.2.2
  *
@@ -267,13 +368,13 @@ body {
 
 /* line 24, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_scaffolding.scss */
 a {
-  color: #783e22;
+  color: black;
   text-decoration: none;
 }
 
 /* line 28, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_scaffolding.scss */
 a:hover {
-  color: #783e22;
+  color: black;
   text-decoration: underline;
 }
 
@@ -3370,14 +3471,14 @@ table th[class*="span"],
 .dropdown-submenu:hover > a {
   text-decoration: none;
   color: white;
-  background-color: #70391f;
-  background-image: -moz-linear-gradient(top, #783e22, #64331c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#783e22), to(#64331c));
-  background-image: -webkit-linear-gradient(top, #783e22, #64331c);
-  background-image: -o-linear-gradient(top, #783e22, #64331c);
-  background-image: linear-gradient(to bottom, #783e22, #64331c);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF783E22, endColorstr=#FF64331C, GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
 }
 
 /* line 99, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_dropdowns.scss */
@@ -3386,14 +3487,14 @@ table th[class*="span"],
   color: white;
   text-decoration: none;
   outline: 0;
-  background-color: #70391f;
-  background-image: -moz-linear-gradient(top, #783e22, #64331c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#783e22), to(#64331c));
-  background-image: -webkit-linear-gradient(top, #783e22, #64331c);
-  background-image: -o-linear-gradient(top, #783e22, #64331c);
-  background-image: linear-gradient(to bottom, #783e22, #64331c);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF783E22, endColorstr=#FF64331C, GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
 }
 
 /* line 110, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_dropdowns.scss */
@@ -3791,29 +3892,29 @@ input[type="button"].btn-block {
 .btn-primary {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #784922;
-  background-image: -moz-linear-gradient(top, #783e22, #785a22);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#783e22), to(#785a22));
-  background-image: -webkit-linear-gradient(top, #783e22, #785a22);
-  background-image: -o-linear-gradient(top, #783e22, #785a22);
-  background-image: linear-gradient(to bottom, #783e22, #785a22);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF783E22, endColorstr=#FF785A22, GradientType=0);
-  border-color: #785a22 #785a22 #3c2d11;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
+  border-color: black black black;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  *background-color: #785a22;
+  *background-color: black;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 /* line 498, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_mixins.scss */
 .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
   color: white;
-  background-color: #785a22;
-  *background-color: #644b1c;
+  background-color: black;
+  *background-color: black;
 }
 /* line 506, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_mixins.scss */
 .btn-primary:active, .btn-primary.active {
-  background-color: #503c17 \9;
+  background-color: black \9;
   /* IE6-9 */
 }
 
@@ -4013,7 +4114,7 @@ input[type="submit"].btn.btn-mini {
 .btn-link {
   border-color: transparent;
   cursor: pointer;
-  color: #783e22;
+  color: black;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -4021,7 +4122,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 220, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_buttons.scss */
 .btn-link:hover {
-  color: #783e22;
+  color: black;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -4203,7 +4304,7 @@ input[type="submit"].btn.btn-mini {
 }
 /* line 141, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_button-groups.scss */
 .btn-group.open .btn-primary.dropdown-toggle {
-  background-color: #785a22;
+  background-color: black;
 }
 /* line 144, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_button-groups.scss */
 .btn-group.open .btn-warning.dropdown-toggle {
@@ -4472,7 +4573,7 @@ input[type="submit"].btn.btn-mini {
 .nav-list > .active > a:hover {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background-color: #783e22;
+  background-color: black;
 }
 
 /* line 78, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navs.scss */
@@ -4576,7 +4677,7 @@ input[type="submit"].btn.btn-mini {
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
   color: white;
-  background-color: #783e22;
+  background-color: black;
 }
 
 /* line 167, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navs.scss */
@@ -4660,15 +4761,15 @@ input[type="submit"].btn.btn-mini {
 
 /* line 218, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navs.scss */
 .nav .dropdown-toggle .caret {
-  border-top-color: #783e22;
-  border-bottom-color: #783e22;
+  border-top-color: black;
+  border-bottom-color: black;
   margin-top: 6px;
 }
 
 /* line 223, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navs.scss */
 .nav .dropdown-toggle:hover .caret {
-  border-top-color: #783e22;
-  border-bottom-color: #783e22;
+  border-top-color: black;
+  border-bottom-color: black;
 }
 
 /* move down carets for tabs */
@@ -4880,15 +4981,15 @@ input[type="submit"].btn.btn-mini {
   min-height: 56px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #70391f;
-  background-image: -moz-linear-gradient(top, #783e22, #64331c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#783e22), to(#64331c));
-  background-image: -webkit-linear-gradient(top, #783e22, #64331c);
-  background-image: -o-linear-gradient(top, #783e22, #64331c);
-  background-image: linear-gradient(to bottom, #783e22, #64331c);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF783E22, endColorstr=#FF64331C, GradientType=0);
-  border: 1px solid #351b0f;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
+  border: 1px solid black;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -4928,7 +5029,7 @@ input[type="submit"].btn.btn-mini {
   font-size: 20px;
   font-weight: 200;
   color: #777777;
-  text-shadow: 0 1px 0 #783e22;
+  text-shadow: 0 1px 0 black;
 }
 /* line 59, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navbar.scss */
 .navbar .brand:hover {
@@ -4955,8 +5056,8 @@ input[type="submit"].btn.btn-mini {
 .navbar .divider-vertical {
   height: 56px;
   margin: 0 9px;
-  border-left: 1px solid #64331c;
-  border-right: 1px solid #783e22;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
 /* line 93, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navbar.scss */
@@ -5138,7 +5239,7 @@ input[type="submit"].btn.btn-mini {
   padding: 15.5px 15px 15.5px;
   color: #777777;
   text-decoration: none;
-  text-shadow: 0 1px 0 #783e22;
+  text-shadow: 0 1px 0 black;
 }
 
 /* line 243, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navbar.scss */
@@ -5160,7 +5261,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > .active > a:focus {
   color: #555555;
   text-decoration: none;
-  background-color: #502917;
+  background-color: black;
   -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
   -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
@@ -5175,17 +5276,17 @@ input[type="submit"].btn.btn-mini {
   margin-right: 5px;
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #5c2f1a;
-  background-image: -moz-linear-gradient(top, #64331c, #502917);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#64331c), to(#502917));
-  background-image: -webkit-linear-gradient(top, #64331c, #502917);
-  background-image: -o-linear-gradient(top, #64331c, #502917);
-  background-image: linear-gradient(to bottom, #64331c, #502917);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF64331C, endColorstr=#FF502917, GradientType=0);
-  border-color: #502917 #502917 #150b06;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
+  border-color: black black black;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  *background-color: #502917;
+  *background-color: black;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
@@ -5195,12 +5296,12 @@ input[type="submit"].btn.btn-mini {
 /* line 498, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_mixins.scss */
 .navbar .btn-navbar:hover, .navbar .btn-navbar:active, .navbar .btn-navbar.active, .navbar .btn-navbar.disabled, .navbar .btn-navbar[disabled] {
   color: white;
-  background-color: #502917;
-  *background-color: #3c1f11;
+  background-color: black;
+  *background-color: black;
 }
 /* line 506, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_mixins.scss */
 .navbar .btn-navbar:active, .navbar .btn-navbar.active {
-  background-color: #29150b \9;
+  background-color: black \9;
   /* IE6-9 */
 }
 
@@ -5273,7 +5374,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav li.dropdown.open > .dropdown-toggle,
 .navbar .nav li.dropdown.active > .dropdown-toggle,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-  background-color: #502917;
+  background-color: black;
   color: #555555;
 }
 
@@ -6132,7 +6233,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 38, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_thumbnails.scss */
 a.thumbnail:hover {
-  border-color: #783e22;
+  border-color: black;
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
@@ -7075,13 +7176,13 @@ body {
 
 /* line 24, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_scaffolding.scss */
 a {
-  color: #783e22;
+  color: black;
   text-decoration: none;
 }
 
 /* line 28, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_scaffolding.scss */
 a:hover {
-  color: #783e22;
+  color: black;
   text-decoration: underline;
 }
 
@@ -10178,14 +10279,14 @@ table th[class*="span"],
 .dropdown-submenu:hover > a {
   text-decoration: none;
   color: white;
-  background-color: #70391f;
-  background-image: -moz-linear-gradient(top, #783e22, #64331c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#783e22), to(#64331c));
-  background-image: -webkit-linear-gradient(top, #783e22, #64331c);
-  background-image: -o-linear-gradient(top, #783e22, #64331c);
-  background-image: linear-gradient(to bottom, #783e22, #64331c);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF783E22, endColorstr=#FF64331C, GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
 }
 
 /* line 99, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_dropdowns.scss */
@@ -10194,14 +10295,14 @@ table th[class*="span"],
   color: white;
   text-decoration: none;
   outline: 0;
-  background-color: #70391f;
-  background-image: -moz-linear-gradient(top, #783e22, #64331c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#783e22), to(#64331c));
-  background-image: -webkit-linear-gradient(top, #783e22, #64331c);
-  background-image: -o-linear-gradient(top, #783e22, #64331c);
-  background-image: linear-gradient(to bottom, #783e22, #64331c);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF783E22, endColorstr=#FF64331C, GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
 }
 
 /* line 110, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_dropdowns.scss */
@@ -10599,29 +10700,29 @@ input[type="button"].btn-block {
 .btn-primary {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #784922;
-  background-image: -moz-linear-gradient(top, #783e22, #785a22);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#783e22), to(#785a22));
-  background-image: -webkit-linear-gradient(top, #783e22, #785a22);
-  background-image: -o-linear-gradient(top, #783e22, #785a22);
-  background-image: linear-gradient(to bottom, #783e22, #785a22);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF783E22, endColorstr=#FF785A22, GradientType=0);
-  border-color: #785a22 #785a22 #3c2d11;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
+  border-color: black black black;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  *background-color: #785a22;
+  *background-color: black;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 /* line 498, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_mixins.scss */
 .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
   color: white;
-  background-color: #785a22;
-  *background-color: #644b1c;
+  background-color: black;
+  *background-color: black;
 }
 /* line 506, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_mixins.scss */
 .btn-primary:active, .btn-primary.active {
-  background-color: #503c17 \9;
+  background-color: black \9;
   /* IE6-9 */
 }
 
@@ -10821,7 +10922,7 @@ input[type="submit"].btn.btn-mini {
 .btn-link {
   border-color: transparent;
   cursor: pointer;
-  color: #783e22;
+  color: black;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -10829,7 +10930,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 220, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_buttons.scss */
 .btn-link:hover {
-  color: #783e22;
+  color: black;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -11011,7 +11112,7 @@ input[type="submit"].btn.btn-mini {
 }
 /* line 141, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_button-groups.scss */
 .btn-group.open .btn-primary.dropdown-toggle {
-  background-color: #785a22;
+  background-color: black;
 }
 /* line 144, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_button-groups.scss */
 .btn-group.open .btn-warning.dropdown-toggle {
@@ -11280,7 +11381,7 @@ input[type="submit"].btn.btn-mini {
 .nav-list > .active > a:hover {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background-color: #783e22;
+  background-color: black;
 }
 
 /* line 78, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navs.scss */
@@ -11384,7 +11485,7 @@ input[type="submit"].btn.btn-mini {
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
   color: white;
-  background-color: #783e22;
+  background-color: black;
 }
 
 /* line 167, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navs.scss */
@@ -11468,15 +11569,15 @@ input[type="submit"].btn.btn-mini {
 
 /* line 218, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navs.scss */
 .nav .dropdown-toggle .caret {
-  border-top-color: #783e22;
-  border-bottom-color: #783e22;
+  border-top-color: black;
+  border-bottom-color: black;
   margin-top: 6px;
 }
 
 /* line 223, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navs.scss */
 .nav .dropdown-toggle:hover .caret {
-  border-top-color: #783e22;
-  border-bottom-color: #783e22;
+  border-top-color: black;
+  border-bottom-color: black;
 }
 
 /* move down carets for tabs */
@@ -11688,15 +11789,15 @@ input[type="submit"].btn.btn-mini {
   min-height: 56px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #70391f;
-  background-image: -moz-linear-gradient(top, #783e22, #64331c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#783e22), to(#64331c));
-  background-image: -webkit-linear-gradient(top, #783e22, #64331c);
-  background-image: -o-linear-gradient(top, #783e22, #64331c);
-  background-image: linear-gradient(to bottom, #783e22, #64331c);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF783E22, endColorstr=#FF64331C, GradientType=0);
-  border: 1px solid #351b0f;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
+  border: 1px solid black;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -11736,7 +11837,7 @@ input[type="submit"].btn.btn-mini {
   font-size: 20px;
   font-weight: 200;
   color: #777777;
-  text-shadow: 0 1px 0 #783e22;
+  text-shadow: 0 1px 0 black;
 }
 /* line 59, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navbar.scss */
 .navbar .brand:hover {
@@ -11763,8 +11864,8 @@ input[type="submit"].btn.btn-mini {
 .navbar .divider-vertical {
   height: 56px;
   margin: 0 9px;
-  border-left: 1px solid #64331c;
-  border-right: 1px solid #783e22;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
 /* line 93, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navbar.scss */
@@ -11946,7 +12047,7 @@ input[type="submit"].btn.btn-mini {
   padding: 15.5px 15px 15.5px;
   color: #777777;
   text-decoration: none;
-  text-shadow: 0 1px 0 #783e22;
+  text-shadow: 0 1px 0 black;
 }
 
 /* line 243, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navbar.scss */
@@ -11968,7 +12069,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > .active > a:focus {
   color: #555555;
   text-decoration: none;
-  background-color: #502917;
+  background-color: black;
   -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
   -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
@@ -11983,17 +12084,17 @@ input[type="submit"].btn.btn-mini {
   margin-right: 5px;
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #5c2f1a;
-  background-image: -moz-linear-gradient(top, #64331c, #502917);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#64331c), to(#502917));
-  background-image: -webkit-linear-gradient(top, #64331c, #502917);
-  background-image: -o-linear-gradient(top, #64331c, #502917);
-  background-image: linear-gradient(to bottom, #64331c, #502917);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF64331C, endColorstr=#FF502917, GradientType=0);
-  border-color: #502917 #502917 #150b06;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
+  border-color: black black black;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  *background-color: #502917;
+  *background-color: black;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
@@ -12003,12 +12104,12 @@ input[type="submit"].btn.btn-mini {
 /* line 498, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_mixins.scss */
 .navbar .btn-navbar:hover, .navbar .btn-navbar:active, .navbar .btn-navbar.active, .navbar .btn-navbar.disabled, .navbar .btn-navbar[disabled] {
   color: white;
-  background-color: #502917;
-  *background-color: #3c1f11;
+  background-color: black;
+  *background-color: black;
 }
 /* line 506, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_mixins.scss */
 .navbar .btn-navbar:active, .navbar .btn-navbar.active {
-  background-color: #29150b \9;
+  background-color: black \9;
   /* IE6-9 */
 }
 
@@ -12081,7 +12182,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav li.dropdown.open > .dropdown-toggle,
 .navbar .nav li.dropdown.active > .dropdown-toggle,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-  background-color: #502917;
+  background-color: black;
   color: #555555;
 }
 
@@ -12940,7 +13041,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 38, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_thumbnails.scss */
 a.thumbnail:hover {
-  border-color: #783e22;
+  border-color: black;
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
@@ -14971,7 +15072,7 @@ a.label:hover, a.badge:hover {
   /* line 85, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav > li > a:hover,
   .nav-collapse .dropdown-menu a:hover {
-    background-color: #64331c;
+    background-color: black;
   }
 
   /* line 89, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_responsive-navbar.scss */
@@ -15039,8 +15140,8 @@ a.label:hover, a.badge:hover {
     float: none;
     padding: 12.5px 15px;
     margin: 12.5px 0;
-    border-top: 1px solid #64331c;
-    border-bottom: 1px solid #64331c;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -17282,24 +17383,24 @@ a.label:hover, a.badge:hover {
 /* line 44, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/_bootstrap_mod.scss */
 .navbar.navbar-transparent .navbar-inner .nav li.active a {
   color: #FFFFFF !important;
-  background-color: #783e22 !important;
+  background-color: black !important;
 }
 /* line 49, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/_bootstrap_mod.scss */
 .navbar.navbar-transparent .navbar-inner .nav li.open {
-  background-color: #783e22 !important;
+  background-color: black !important;
   margin-bottom: 0px !important;
 }
 /* line 52, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/_bootstrap_mod.scss */
 .navbar.navbar-transparent .navbar-inner .nav li.open a {
   color: white !important;
-  background-color: #783e22 !important;
+  background-color: black !important;
   margin-bottom: 0px !important;
 }
 /* line 57, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/_bootstrap_mod.scss */
 .navbar.navbar-transparent .navbar-inner .nav li.open ul {
   padding-bottom: 0px !important;
   padding-top: 0px !important;
-  background-color: #783e22 !important;
+  background-color: black !important;
 }
 /* line 61, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/_bootstrap_mod.scss */
 .navbar.navbar-transparent .navbar-inner .nav li.open ul li {
@@ -17310,7 +17411,7 @@ a.label:hover, a.badge:hover {
   margin-bottom: 0px !important;
   color: #777777 !important;
   background-color: white !important;
-  text-shadow: #783e22 0px 0.9090908766px 0px !important;
+  text-shadow: black 0px 0.9090908766px 0px !important;
   background-image: none !important;
   height: 25px !important;
   line-height: 25px !important;
@@ -17319,17 +17420,17 @@ a.label:hover, a.badge:hover {
 /* line 73, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/_bootstrap_mod.scss */
 .navbar.navbar-transparent .navbar-inner .nav li.open ul li a:hover {
   color: white !important;
-  background-color: #783e22 !important;
+  background-color: black !important;
 }
 /* line 77, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/_bootstrap_mod.scss */
 .navbar.navbar-transparent .navbar-inner .nav li.open ul li a:visited {
   color: #777777;
-  background-color: #783e22;
+  background-color: black;
 }
 /* line 83, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/_bootstrap_mod.scss */
 .navbar.navbar-transparent .navbar-inner .nav li.open ul li.active a {
   color: white !important;
-  background-color: #783e22 !important;
+  background-color: black !important;
 }
 @media (max-width: 1200px) {
   /* line 91, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/_bootstrap_mod.scss */
@@ -17355,19 +17456,19 @@ a.label:hover, a.badge:hover {
   color: #777777 !important;
   background-color: white !important;
   padding-top: 0px !important;
-  text-shadow: #783e22 0px 0.9090908766px 0px !important;
+  text-shadow: black 0px 0.9090908766px 0px !important;
   padding-bottom: 0px !important;
   border-radius: 0 !important;
 }
 /* line 118, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/_bootstrap_mod.scss */
 .navbar.navbar-transparent .navbar-inner .nav li a:hover {
   color: white !important;
-  background-color: #783e22 !important;
+  background-color: black !important;
 }
 /* line 122, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/_bootstrap_mod.scss */
 .navbar.navbar-transparent .navbar-inner .nav li a:visited {
   color: #777777;
-  background-color: #783e22;
+  background-color: black;
 }
 /* line 127, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/_bootstrap_mod.scss */
 .navbar.navbar-transparent .navbar-inner .nav li .dropdown-menu:before {
@@ -17465,10 +17566,10 @@ form input[type="search"]:focus,
 form input[type="tel"]:focus,
 form input[type="color"]:focus,
 form .uneditable-input:focus {
-  border-color: rgba(120, 62, 34, 0.8);
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(120, 62, 34, 0.6);
-  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(120, 62, 34, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(120, 62, 34, 0.6);
+  border-color: rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
 }
 /* line 223, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/_bootstrap_mod.scss */
 form legend {
@@ -17502,31 +17603,66 @@ form.form-horizontal legend {
     padding-left: 0;
   }
 }
-/* line 1, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 2, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+#calendar .fc-event {
+  cursor: pointer;
+}
+
+/* line 6, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+.event_box {
+  position: fixed;
+  height: 400px;
+  width: 300px;
+  right: -100%;
+  top: 25%;
+  border-top-left-radius: 35px;
+  border-bottom-left-radius: 35px;
+  border: 3px solid black;
+  background-color: white;
+  padding: 25px;
+}
+/* line 17, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+.event_box .event_title {
+  width: 100%;
+}
+/* line 20, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+.event_box .event_subtitle {
+  width: 100%;
+}
+/* line 23, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+.event_box .event_image {
+  width: 100%;
+}
+/* line 26, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+.event_box .event_body {
+  width: 100%;
+}
+
+/* line 30, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 .headline {
-  background-color: #783e22;
+  background-color: black;
   height: 105px;
   border-top-left-radius: 35px;
 }
 
-/* line 7, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 36, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 .page_title {
   margin-bottom: 30px;
 }
 
-/* line 10, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 39, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 .scaff_row {
   margin-left: 0px;
 }
 
-/* line 13, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 42, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 .open-nav-slider:hover {
   background-color: white;
   color: #000000;
-  border-bottom: 1px solid #783e22;
+  border-bottom: 1px solid black;
 }
 
-/* line 18, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 47, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 .open-nav-slider {
   position: fixed;
   display: none;
@@ -17541,7 +17677,7 @@ form.form-horizontal legend {
   text-align: center;
 }
 
-/* line 31, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 60, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 body.noscroll {
   position: fixed;
   overflow-y: scroll;
@@ -17550,7 +17686,7 @@ body.noscroll {
 }
 
 @media (max-width: 500px) {
-  /* line 38, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 67, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   body {
     height: 100% !important;
     padding: 0 !important;
@@ -17558,17 +17694,17 @@ body.noscroll {
     margin-bottom: 50px !important;
   }
 
-  /* line 44, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 73, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   .open-nav-slider {
     display: block !important;
   }
 
-  /* line 47, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 76, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   .scaff_row {
     margin-left: 0px !important;
   }
 
-  /* line 50, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 79, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   .headline {
     z-index: 10;
     position: fixed;
@@ -17580,30 +17716,30 @@ body.noscroll {
   }
 }
 @media (max-width: 1200px) {
-  /* line 61, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 90, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   body {
     height: 100% !important;
     padding: 0 !important;
     margin-top: 0px !important;
   }
 
-  /* line 67, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 96, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   .row-fluid .span10 {
     width: 100% !important;
     margin-left: 0px !important;
   }
 
-  /* line 72, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 101, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   .scaff_row {
     margin-left: 0px !important;
   }
 
-  /* line 75, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 104, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   .headline {
     height: 0px;
   }
 }
-/* line 79, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 108, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 .lghk-wrapper {
   background-color: white;
   border-bottom: 1px solid black;
@@ -17612,20 +17748,20 @@ body.noscroll {
   border-left: 1px solid black;
 }
 
-/* line 89, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 118, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper h3.brown {
-  color: #8b4726;
+  color: black;
 }
-/* line 92, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 121, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .yield-nav {
   padding-bottom: 35px;
   display: block;
   position: fixed;
   width: 230px;
   border-bottom-right-radius: 35px;
-  background-color: #783e22;
+  background-color: black;
 }
-/* line 103, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 132, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .yield-container {
   background-color: #FFFFFF;
   word-wrap: break-word !important;
@@ -17646,14 +17782,14 @@ body.noscroll {
   padding: 15px;
   margin-left: 2%;
 }
-/* line 119, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 148, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .yield-container .page-head {
   width: 100%;
   margin-left: -37px;
   margin-top: -15px;
   height: 150px;
 }
-/* line 124, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 153, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .yield-container .page-head .branding {
   float: left;
   line-height: 100px;
@@ -17661,12 +17797,12 @@ body.noscroll {
   width: 20%;
   height: 150px;
 }
-/* line 130, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 159, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .yield-container .page-head .branding .in_icon {
   margin-top: -160px;
   margin-left: 0px;
 }
-/* line 135, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 164, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .yield-container .page-head .title {
   float: left;
   height: 100px;
@@ -17676,18 +17812,18 @@ body.noscroll {
   margin-left: 37px;
   width: 60%;
 }
-/* line 145, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 174, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .yield-container .page_jumper {
   text-decoration: none !important;
 }
-/* line 149, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 178, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .nav-container {
   float: left;
   color: #FFFFFF;
   width: 230px;
   padding-bottom: 2px;
 }
-/* line 154, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 183, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .nav-container .divider_area {
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
@@ -17700,7 +17836,7 @@ body.noscroll {
   text-align: center;
 }
 @media (max-width: 500px) {
-  /* line 163, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 192, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   #content-wrapper .nav-container .navdivider {
     display: none !important;
     position: absolute;
@@ -17708,7 +17844,7 @@ body.noscroll {
     left: 55%;
   }
 }
-/* line 171, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 200, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .nav-container .navdivider.rotated-180 {
   transform: rotate(180deg);
   -ms-transform: rotate(180deg);
@@ -17716,7 +17852,7 @@ body.noscroll {
   -webkit-transform: rotate(180deg);
   /* Safari and Chrome */
 }
-/* line 177, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 206, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .nav-container .navbar_glyph {
   z-index: 3010;
   transform: rotate(270deg);
@@ -17732,7 +17868,7 @@ body.noscroll {
   top: 0;
   left: 0;
 }
-/* line 190, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 219, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .nav-container .close-nav-slider {
   color: white;
   width: 30px;
@@ -17743,45 +17879,45 @@ body.noscroll {
   cursor: pointer;
   text-align: center;
 }
-/* line 200, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 229, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .nav-container .close-nav-slider:hover {
   background-color: white;
   color: #000000;
 }
 @media (max-width: 1200px) {
-  /* line 206, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 235, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   #content-wrapper .nav-container ul.custom_nav {
     margin-top: 2px !important;
   }
 }
-/* line 210, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 239, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .nav-container ul.custom_nav {
   margin-top: -2px;
   margin-left: 0px;
   margin-bottom: 0px;
 }
-/* line 214, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 243, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .nav-container ul.custom_nav li {
   margin-top: 2px;
 }
-/* line 215, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 244, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .nav-container ul.custom_nav li .dropdown {
   background-color: white;
   display: none;
   margin-left: 2px;
   margin-top: 2px;
 }
-/* line 220, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 249, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .nav-container ul.custom_nav li .dropdown li {
   margin-top: 0px;
   margin-left: 20px;
-  background-color: #783e22;
+  background-color: black;
 }
-/* line 221, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 250, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .nav-container ul.custom_nav li .dropdown li a {
   border-left: none !important;
 }
-/* line 230, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 259, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .nav-container ul.custom_nav li a {
   cursor: pointer;
   -webkit-box-sizing: border-box;
@@ -17794,60 +17930,60 @@ body.noscroll {
   display: block;
   color: white !important;
   font-weight: bold !important;
-  text-shadow: #783e22 1px 1px 2px 1px !important;
+  text-shadow: black 1px 1px 2px 1px !important;
   width: 100% !important;
   margin-left: 0px;
 }
-/* line 232, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 261, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .nav-container ul.custom_nav li a.active {
   background-color: #FFFFFF;
-  border-left: 2px solid #783e22 !important;
-  border-right: 2px solid #783e22 !important;
+  border-left: 2px solid black !important;
+  border-right: 2px solid black !important;
   color: #2e2e2e !important;
   text-decoration: none !important;
 }
-/* line 250, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+/* line 279, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
 #content-wrapper .nav-container ul.custom_nav li a:hover {
   background-color: #FFFFFF;
-  border-left: 2px solid #783e22 !important;
-  border-right: 2px solid #783e22 !important;
+  border-left: 2px solid black !important;
+  border-right: 2px solid black !important;
   color: #2e2e2e !important;
   text-decoration: none !important;
 }
 @media all and (min-width: 1200px) {
-  /* line 261, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 290, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   #content-wrapper .nav-container {
-    background-color: #783e22;
+    background-color: black;
   }
 }
 @media all and (max-width: 1200px) and (min-width: 500px) {
-  /* line 266, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 295, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   #content-wrapper .nav-container {
-    background-color: #783e22;
+    background-color: black;
     width: 100% !important;
   }
-  /* line 271, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 300, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   #content-wrapper .nav-container ul.custom_nav li a {
     padding-top: 25px;
     padding-bottom: 25px;
     font-size: 20px;
   }
-  /* line 279, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 308, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   #content-wrapper .nav-container .yield-nav {
     display: none;
   }
-  /* line 282, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 311, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   #content-wrapper .nav-container .close-nav-slider {
     display: none;
   }
-  /* line 286, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 315, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   #content-wrapper .yield-container {
     width: 100% !important;
     margin-left: 0px !important;
   }
 }
 @media (max-width: 500px) {
-  /* line 292, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 321, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   #content-wrapper .nav-container {
     position: absolute;
     height: 100%;
@@ -17857,7 +17993,7 @@ body.noscroll {
     z-index: 500;
     left: -102%;
   }
-  /* line 300, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 329, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   #content-wrapper .nav-container .link_area {
     -webkit-box-sizing: border-box;
     /* Safari/Chrome, other WebKit */
@@ -17865,38 +18001,38 @@ body.noscroll {
     /* Firefox, other Gecko */
     box-sizing: border-box;
     /* Opera/IE 8+ */
-    border-right: 5px inset #502917;
-    background-color: #783e22;
+    border-right: 5px inset black;
+    background-color: black;
     width: 80%;
     height: 100%;
     float: left;
   }
-  /* line 309, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 338, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   #content-wrapper .nav-container .link_area ul.custom_nav {
     position: absolute;
     bottom: 0px;
     width: 80%;
     z-index: 3300;
   }
-  /* line 315, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 344, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   #content-wrapper .nav-container .link_area ul.custom_nav li a {
     padding-top: 12.5px;
     padding-bottom: 12.5px;
     font-size: 20px;
   }
-  /* line 323, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 352, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   #content-wrapper .nav-container .link_area .yield-nav {
     display: none;
   }
-  /* line 326, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 355, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   #content-wrapper .nav-container .link_area .navbar_glyph {
     display: block;
   }
-  /* line 329, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 358, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   #content-wrapper .nav-container .link_area .close-nav-slider {
     display: block;
   }
-  /* line 333, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 362, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   #content-wrapper .nav-container .close-nav-touch {
     float: left;
     width: 20%;
@@ -17906,7 +18042,7 @@ body.noscroll {
     cursor: pointer;
     display: none;
   }
-  /* line 343, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
+  /* line 372, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/layout.css.scss */
   #content-wrapper .yield-container {
     width: 100% !important;
     margin-left: 0px !important;
@@ -18205,7 +18341,7 @@ body.noscroll {
   padding-left: 12px;
 }
 
-/* line 64, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr.css.scss */
+/* line 64, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr.css.scss */
 div.menu-only-box {
   text-align: center;
   width: 120px;
@@ -18215,7 +18351,7 @@ div.menu-only-box {
   height: 25px;
 }
 
-/* line 70, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 70, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentrarea-overview {
   border-radius: 5px;
   padding-left: 10px;
@@ -18231,7 +18367,7 @@ div.menu-only-box {
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.24, #3795d4), color-stop(0.62, #5a9be0), color-stop(0.81, #4c8cbd));
 }
 
-/* line 93, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 93, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentr-toolbar {
   overflow: hidden;
   *zoom: 1;
@@ -18245,7 +18381,7 @@ div.menu-only-box {
   border-bottom-color: #00456d;
   border-right-color: #00456d;
 }
-/* line 20, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 20, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentr-toolbar .area-name, .contentr-toolbar .page-classname, .contentr-toolbar .page-urlpath, .contentr-toolbar .contentr-area .toolbar .page-classname, .contentr-area .toolbar .contentr-toolbar .page-classname, .contentr-toolbar .contentr-area .toolbar .page-urlpath, .contentr-area .toolbar .contentr-toolbar .page-urlpath {
   display: inline;
   float: left;
@@ -18256,15 +18392,15 @@ div.menu-only-box {
   color: #003553;
   text-shadow: #008cdd 0 1px 1px;
 }
-/* line 30, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 30, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentr-toolbar .page-classname {
   color: #CC5D21;
 }
-/* line 35, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 35, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentr-toolbar .page-urlpath {
   color: #51D4CB;
 }
-/* line 40, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 40, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentr-toolbar .handle {
   display: inline;
   float: left;
@@ -18274,12 +18410,12 @@ div.menu-only-box {
   text-shadow: #008cdd 0 1px 1px;
   cursor: move;
 }
-/* line 49, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 49, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentr-toolbar .controls {
   display: inline;
   float: right;
 }
-/* line 51, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 51, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentr-toolbar .controls a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -18373,38 +18509,38 @@ div.menu-only-box {
 .contentr-toolbar .controls a a img {
   border: none;
 }
-/* line 38, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr.css.scss */
+/* line 38, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr.css.scss */
 .contentr-toolbar .controls a::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-/* line 47, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr.css.scss */
+/* line 47, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr.css.scss */
 .contentr-toolbar .controls a:focus {
   outline: 1px dotted #666;
 }
-/* line 51, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr.css.scss */
+/* line 51, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr.css.scss */
 .contentr-toolbar .controls a:hover {
   text-decoration: none;
   background-position: 0 -15px;
 }
-/* line 56, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr.css.scss */
+/* line 56, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr.css.scss */
 .contentr-toolbar .controls a:active {
   -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 2px 4px inset, rgba(0, 0, 0, 0.05) 0 1px 2px;
   -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 2px 4px inset, rgba(0, 0, 0, 0.05) 0 1px 2px;
   box-shadow: rgba(0, 0, 0, 0.25) 0 2px 4px inset, rgba(0, 0, 0, 0.05) 0 1px 2px;
 }
-/* line 63, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 63, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentr-toolbar .controls a:last-child {
   margin-right: 0;
 }
 
-/* line 97, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 97, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentr-area {
   margin-top: 25px;
   width: 90%;
   margin-left: 20px;
 }
-/* line 101, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 101, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentr-area .toolbar {
   overflow: hidden;
   *zoom: 1;
@@ -18419,7 +18555,7 @@ div.menu-only-box {
   border-right-color: #00456d;
   padding: 2px 8px;
 }
-/* line 20, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 20, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentr-area .toolbar .area-name, .contentr-area .toolbar .page-classname, .contentr-area .toolbar .page-urlpath {
   display: inline;
   float: left;
@@ -18430,15 +18566,15 @@ div.menu-only-box {
   color: #003553;
   text-shadow: #008cdd 0 1px 1px;
 }
-/* line 30, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 30, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentr-area .toolbar .page-classname {
   color: #CC5D21;
 }
-/* line 35, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 35, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentr-area .toolbar .page-urlpath {
   color: #51D4CB;
 }
-/* line 40, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 40, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentr-area .toolbar .handle {
   display: inline;
   float: left;
@@ -18448,12 +18584,12 @@ div.menu-only-box {
   text-shadow: #008cdd 0 1px 1px;
   cursor: move;
 }
-/* line 49, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 49, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentr-area .toolbar .controls {
   display: inline;
   float: right;
 }
-/* line 51, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 51, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentr-area .toolbar .controls a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -18547,31 +18683,31 @@ div.menu-only-box {
 .contentr-area .toolbar .controls a a img {
   border: none;
 }
-/* line 38, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr.css.scss */
+/* line 38, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr.css.scss */
 .contentr-area .toolbar .controls a::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
-/* line 47, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr.css.scss */
+/* line 47, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr.css.scss */
 .contentr-area .toolbar .controls a:focus {
   outline: 1px dotted #666;
 }
-/* line 51, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr.css.scss */
+/* line 51, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr.css.scss */
 .contentr-area .toolbar .controls a:hover {
   text-decoration: none;
   background-position: 0 -15px;
 }
-/* line 56, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr.css.scss */
+/* line 56, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr.css.scss */
 .contentr-area .toolbar .controls a:active {
   -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 2px 4px inset, rgba(0, 0, 0, 0.05) 0 1px 2px;
   -moz-box-shadow: rgba(0, 0, 0, 0.25) 0 2px 4px inset, rgba(0, 0, 0, 0.05) 0 1px 2px;
   box-shadow: rgba(0, 0, 0, 0.25) 0 2px 4px inset, rgba(0, 0, 0, 0.05) 0 1px 2px;
 }
-/* line 63, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 63, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentr-area .toolbar .controls a:last-child {
   margin-right: 0;
 }
-/* line 106, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 106, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentr-area .page-published {
   padding: 8px 35px 8px 14px;
   margin-bottom: 20px;
@@ -18586,22 +18722,21 @@ div.menu-only-box {
   border-radius: 4px;
   color: red;
 }
-/* line 122, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/frontend-editing.css.scss */
+/* line 122, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/frontend-editing.css.scss */
 .contentr-area .paragraph .toolbar {
   background-color: #0075ba;
 }
 
-/* line 2, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/overlay.css.scss */
+/* line 2, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/overlay.css.scss */
 #contentr-overlay #contentr-overlay-close {
   width: 28px;
   height: 28px;
-  background: transparent url(/assets/contentr/overlay-close-button.png) no-repeat;
   position: absolute;
   top: -14px;
   right: -14px;
   z-index: 1002;
 }
-/* line 12, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/overlay.css.scss */
+/* line 11, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/overlay.css.scss */
 #contentr-overlay #contentr-overlay-mask {
   position: fixed;
   top: 0;
@@ -18612,7 +18747,7 @@ div.menu-only-box {
   background-color: #000;
   opacity: 0.6;
 }
-/* line 23, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/overlay.css.scss */
+/* line 22, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/overlay.css.scss */
 #contentr-overlay #contentr-overlay-wrapper {
   position: fixed;
   top: 0;
@@ -18623,7 +18758,7 @@ div.menu-only-box {
   background-color: #fff;
   box-shadow: 0 0 12px #222;
 }
-/* line 34, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/bundler/gems/contentr-7bf6a1fc14f5/app/assets/stylesheets/contentr/overlay.css.scss */
+/* line 33, /Users/MacBookPro/code/contentr/app/assets/stylesheets/contentr/overlay.css.scss */
 #contentr-overlay #contentr-overlay-iframe {
   width: 100%;
   height: 100%;
@@ -18665,6 +18800,668 @@ div.menu-only-box {
 /* line 25, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/frontend/gmaps4rails.css */
 #map img {
   max-width: none;
+}
+
+/*!
+ * FullCalendar v1.6.4 Stylesheet
+ * Docs & License: http://arshaw.com/fullcalendar/
+ * (c) 2013 Adam Shaw
+ */
+/* line 9, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc {
+  direction: ltr;
+  text-align: left;
+}
+
+/* line 14, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 20, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+html .fc,
+.fc table {
+  font-size: 1em;
+}
+
+/* line 25, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc td,
+.fc th {
+  padding: 0;
+  vertical-align: top;
+}
+
+/* Header
+------------------------------------------------------------------------*/
+/* line 35, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-header td {
+  white-space: nowrap;
+}
+
+/* line 39, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-header-left {
+  width: 25%;
+  text-align: left;
+}
+
+/* line 44, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-header-center {
+  text-align: center;
+}
+
+/* line 48, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-header-right {
+  width: 25%;
+  text-align: right;
+}
+
+/* line 53, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-header-title {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 58, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-header-title h2 {
+  margin-top: 0;
+  white-space: nowrap;
+}
+
+/* line 63, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc .fc-header-space {
+  padding-left: 10px;
+}
+
+/* line 67, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-header .fc-button {
+  margin-bottom: 1em;
+  vertical-align: top;
+}
+
+/* buttons edges butting together */
+/* line 74, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-header .fc-button {
+  margin-right: -1px;
+}
+
+/* line 79, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-header .fc-corner-right,
+.fc-header .ui-corner-right {
+  /* theme */
+  margin-right: 0;
+  /* back to normal */
+}
+
+/* button layering (for border precedence) */
+/* line 86, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-header .fc-state-hover,
+.fc-header .ui-state-hover {
+  z-index: 2;
+}
+
+/* line 90, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-header .fc-state-down {
+  z-index: 3;
+}
+
+/* line 95, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-header .fc-state-active,
+.fc-header .ui-state-active {
+  z-index: 4;
+}
+
+/* Content
+------------------------------------------------------------------------*/
+/* line 104, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-content {
+  clear: both;
+  zoom: 1;
+  /* for IE7, gives accurate coordinates for [un]freezeContentHeight */
+}
+
+/* line 109, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-view {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Cell Styles
+------------------------------------------------------------------------*/
+/* line 120, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-widget-header,
+.fc-widget-content {
+  /* <td>, usually */
+  border: 1px solid #ddd;
+}
+
+/* line 124, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-state-highlight {
+  /* <td> today cell */
+  /* TODO: add .fc-today to <th> */
+  background: #fcf8e3;
+}
+
+/* line 128, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-cell-overlay {
+  /* semi-transparent rectangle while dragging */
+  background: #bce8f1;
+  opacity: .3;
+  filter: alpha(opacity=30);
+  /* for IE */
+}
+
+/* Buttons
+------------------------------------------------------------------------*/
+/* line 139, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-button {
+  position: relative;
+  display: inline-block;
+  padding: 0 .6em;
+  overflow: hidden;
+  height: 1.9em;
+  line-height: 1.9em;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+/* line 150, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-state-default {
+  /* non-theme */
+  border: 1px solid;
+}
+
+/* line 154, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-state-default.fc-corner-left {
+  /* non-theme */
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/* line 159, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-state-default.fc-corner-right {
+  /* non-theme */
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/*
+	Our default prev/next buttons use HTML entities like &lsaquo; &rsaquo; &laquo; &raquo;
+	and we'll try to make them look good cross-browser.
+*/
+/* line 169, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-text-arrow {
+  margin: 0 .1em;
+  font-size: 2em;
+  font-family: "Courier New", Courier, monospace;
+  vertical-align: baseline;
+  /* for IE7 */
+}
+
+/* line 177, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-button-prev .fc-text-arrow,
+.fc-button-next .fc-text-arrow {
+  /* for &lsaquo; &rsaquo; */
+  font-weight: bold;
+}
+
+/* icon (for jquery ui) */
+/* line 183, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-button .fc-icon-wrap {
+  position: relative;
+  float: left;
+  top: 50%;
+}
+
+/* line 189, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-button .ui-icon {
+  position: relative;
+  float: left;
+  margin-top: -50%;
+  *margin-top: 0;
+  *top: -50%;
+}
+
+/*
+  button states
+  borrowed from twitter bootstrap (http://twitter.github.com/bootstrap/)
+*/
+/* line 202, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-state-default {
+  background-color: #f5f5f5;
+  background-image: -moz-linear-gradient(top, white, #e6e6e6);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#e6e6e6));
+  background-image: -webkit-linear-gradient(top, white, #e6e6e6);
+  background-image: -o-linear-gradient(top, white, #e6e6e6);
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  color: #333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* line 220, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-state-hover,
+.fc-state-down,
+.fc-state-active,
+.fc-state-disabled {
+  color: #333333;
+  background-color: #e6e6e6;
+}
+
+/* line 225, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-state-hover {
+  color: #333333;
+  text-decoration: none;
+  background-position: 0 -15px;
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+
+/* line 236, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-state-down,
+.fc-state-active {
+  background-color: #cccccc;
+  background-image: none;
+  outline: 0;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* line 243, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-state-disabled {
+  cursor: default;
+  background-image: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  box-shadow: none;
+}
+
+/* Global Event Styles
+------------------------------------------------------------------------*/
+/* line 256, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-event-container > * {
+  z-index: 8;
+}
+
+/* line 261, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-event-container > .ui-draggable-dragging,
+.fc-event-container > .ui-resizable-resizing {
+  z-index: 9;
+}
+
+/* line 265, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-event {
+  border: 1px solid #3a87ad;
+  /* default BORDER color */
+  background-color: #3a87ad;
+  /* default BACKGROUND color */
+  color: #fff;
+  /* default TEXT color */
+  font-size: .85em;
+  cursor: default;
+}
+
+/* line 273, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+a.fc-event {
+  text-decoration: none;
+}
+
+/* line 278, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+a.fc-event,
+.fc-event-draggable {
+  cursor: pointer;
+}
+
+/* line 282, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-rtl .fc-event {
+  text-align: right;
+}
+
+/* line 286, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-event-inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 293, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-event-time,
+.fc-event-title {
+  padding: 0 1px;
+}
+
+/* line 297, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc .ui-resizable-handle {
+  display: block;
+  position: absolute;
+  z-index: 99999;
+  overflow: hidden;
+  /* hacky spaces (IE6/7) */
+  font-size: 300%;
+  /* */
+  line-height: 50%;
+  /* */
+}
+
+/* Horizontal Events
+------------------------------------------------------------------------*/
+/* line 311, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-event-hori {
+  border-width: 1px 0;
+  margin-bottom: 1px;
+}
+
+/* line 317, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-ltr .fc-event-hori.fc-event-start,
+.fc-rtl .fc-event-hori.fc-event-end {
+  border-left-width: 1px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+/* line 324, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-ltr .fc-event-hori.fc-event-end,
+.fc-rtl .fc-event-hori.fc-event-start {
+  border-right-width: 1px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+/* resizable */
+/* line 332, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-event-hori .ui-resizable-e {
+  top: 0           !important;
+  /* importants override pre jquery ui 1.7 styles */
+  right: -3px      !important;
+  width: 7px       !important;
+  height: 100%     !important;
+  cursor: e-resize;
+}
+
+/* line 340, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-event-hori .ui-resizable-w {
+  top: 0           !important;
+  left: -3px       !important;
+  width: 7px       !important;
+  height: 100%     !important;
+  cursor: w-resize;
+}
+
+/* line 348, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-event-hori .ui-resizable-handle {
+  _padding-bottom: 14px;
+  /* IE6 had 0 height */
+}
+
+/* Reusable Separate-border Table
+------------------------------------------------------------*/
+/* line 357, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+table.fc-border-separate {
+  border-collapse: separate;
+}
+
+/* line 362, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-border-separate th,
+.fc-border-separate td {
+  border-width: 1px 0 0 1px;
+}
+
+/* line 367, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-border-separate th.fc-last,
+.fc-border-separate td.fc-last {
+  border-right-width: 1px;
+}
+
+/* line 372, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-border-separate tr.fc-last th,
+.fc-border-separate tr.fc-last td {
+  border-bottom-width: 1px;
+}
+
+/* line 377, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-border-separate tbody tr.fc-first td,
+.fc-border-separate tbody tr.fc-first th {
+  border-top-width: 0;
+}
+
+/* Month View, Basic Week View, Basic Day View
+------------------------------------------------------------------------*/
+/* line 386, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-grid th {
+  text-align: center;
+}
+
+/* line 390, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc .fc-week-number {
+  width: 22px;
+  text-align: center;
+}
+
+/* line 395, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc .fc-week-number div {
+  padding: 0 2px;
+}
+
+/* line 399, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-grid .fc-day-number {
+  float: right;
+  padding: 0 2px;
+}
+
+/* line 404, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-grid .fc-other-month .fc-day-number {
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  /* for IE */
+  /* opacity with small font can sometimes look too faded
+     might want to set the 'color' property instead
+     making day-numbers bold also fixes the problem */
+}
+
+/* line 412, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-grid .fc-day-content {
+  clear: both;
+  padding: 2px 2px 1px;
+  /* distance between events and day edges */
+}
+
+/* event styles */
+/* line 419, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-grid .fc-event-time {
+  font-weight: bold;
+}
+
+/* right-to-left */
+/* line 425, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-rtl .fc-grid .fc-day-number {
+  float: left;
+}
+
+/* line 429, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-rtl .fc-grid .fc-event-time {
+  float: right;
+}
+
+/* Agenda Week View, Agenda Day View
+------------------------------------------------------------------------*/
+/* line 438, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-agenda table {
+  border-collapse: separate;
+}
+
+/* line 442, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-agenda-days th {
+  text-align: center;
+}
+
+/* line 446, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-agenda .fc-agenda-axis {
+  width: 50px;
+  padding: 0 4px;
+  vertical-align: middle;
+  text-align: right;
+  white-space: nowrap;
+  font-weight: normal;
+}
+
+/* line 455, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-agenda .fc-week-number {
+  font-weight: bold;
+}
+
+/* line 459, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-agenda .fc-day-content {
+  padding: 2px 2px 1px;
+}
+
+/* make axis border take precedence */
+/* line 465, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-agenda-days .fc-agenda-axis {
+  border-right-width: 1px;
+}
+
+/* line 469, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-agenda-days .fc-col0 {
+  border-left-width: 0;
+}
+
+/* all-day area */
+/* line 475, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-agenda-allday th {
+  border-width: 0 1px;
+}
+
+/* line 479, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-agenda-allday .fc-day-content {
+  min-height: 34px;
+  /* TODO: doesnt work well in quirksmode */
+  _height: 34px;
+}
+
+/* divider (between all-day and slots) */
+/* line 486, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-agenda-divider-inner {
+  height: 2px;
+  overflow: hidden;
+}
+
+/* line 491, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-widget-header .fc-agenda-divider-inner {
+  background: #eee;
+}
+
+/* slot rows */
+/* line 497, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-agenda-slots th {
+  border-width: 1px 1px 0;
+}
+
+/* line 501, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-agenda-slots td {
+  border-width: 1px 0 0;
+  background: none;
+}
+
+/* line 506, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-agenda-slots td div {
+  height: 20px;
+}
+
+/* line 511, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-agenda-slots tr.fc-slot0 th,
+.fc-agenda-slots tr.fc-slot0 td {
+  border-top-width: 0;
+}
+
+/* line 516, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-agenda-slots tr.fc-minor th,
+.fc-agenda-slots tr.fc-minor td {
+  border-top-style: dotted;
+}
+
+/* line 520, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-agenda-slots tr.fc-minor th.ui-widget-header {
+  *border-top-style: solid;
+  /* doesn't work with background in IE6/7 */
+}
+
+/* Vertical Events
+------------------------------------------------------------------------*/
+/* line 529, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-event-vert {
+  border-width: 0 1px;
+}
+
+/* line 533, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-event-vert.fc-event-start {
+  border-top-width: 1px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+/* line 539, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-event-vert.fc-event-end {
+  border-bottom-width: 1px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+/* line 545, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-event-vert .fc-event-time {
+  white-space: nowrap;
+  font-size: 10px;
+}
+
+/* line 550, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-event-vert .fc-event-inner {
+  position: relative;
+  z-index: 2;
+}
+
+/* line 555, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-event-vert .fc-event-bg {
+  /* makes the event lighter w/ a semi-transparent overlay  */
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: .25;
+  filter: alpha(opacity=25);
+}
+
+/* line 568, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc .ui-draggable-dragging .fc-event-bg,
+.fc-select-helper .fc-event-bg {
+  display: none\9;
+  /* for IE6/7/8. nested opacity filters while dragging don't work */
+}
+
+/* resizable */
+/* line 574, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-event-vert .ui-resizable-s {
+  bottom: 0        !important;
+  /* importants override pre jquery ui 1.7 styles */
+  width: 100%      !important;
+  height: 8px      !important;
+  overflow: hidden !important;
+  line-height: 8px !important;
+  font-size: 11px  !important;
+  font-family: monospace;
+  text-align: center;
+  cursor: s-resize;
+}
+
+/* line 586, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/fullcalendar-rails-1.6.4.0/vendor/assets/stylesheets/fullcalendar.css */
+.fc-agenda .ui-resizable-resizing {
+  /* TODO: better selector */
+  _overflow: hidden;
 }
 
 /*!
@@ -18932,13 +19729,13 @@ body {
 
 /* line 24, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_scaffolding.scss */
 a {
-  color: #783e22;
+  color: black;
   text-decoration: none;
 }
 
 /* line 28, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_scaffolding.scss */
 a:hover {
-  color: #783e22;
+  color: black;
   text-decoration: underline;
 }
 
@@ -22035,14 +22832,14 @@ table th[class*="span"],
 .dropdown-submenu:hover > a {
   text-decoration: none;
   color: white;
-  background-color: #70391f;
-  background-image: -moz-linear-gradient(top, #783e22, #64331c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#783e22), to(#64331c));
-  background-image: -webkit-linear-gradient(top, #783e22, #64331c);
-  background-image: -o-linear-gradient(top, #783e22, #64331c);
-  background-image: linear-gradient(to bottom, #783e22, #64331c);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF783E22, endColorstr=#FF64331C, GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
 }
 
 /* line 99, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_dropdowns.scss */
@@ -22051,14 +22848,14 @@ table th[class*="span"],
   color: white;
   text-decoration: none;
   outline: 0;
-  background-color: #70391f;
-  background-image: -moz-linear-gradient(top, #783e22, #64331c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#783e22), to(#64331c));
-  background-image: -webkit-linear-gradient(top, #783e22, #64331c);
-  background-image: -o-linear-gradient(top, #783e22, #64331c);
-  background-image: linear-gradient(to bottom, #783e22, #64331c);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF783E22, endColorstr=#FF64331C, GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
 }
 
 /* line 110, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_dropdowns.scss */
@@ -22456,29 +23253,29 @@ input[type="button"].btn-block {
 .btn-primary {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #784922;
-  background-image: -moz-linear-gradient(top, #783e22, #785a22);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#783e22), to(#785a22));
-  background-image: -webkit-linear-gradient(top, #783e22, #785a22);
-  background-image: -o-linear-gradient(top, #783e22, #785a22);
-  background-image: linear-gradient(to bottom, #783e22, #785a22);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF783E22, endColorstr=#FF785A22, GradientType=0);
-  border-color: #785a22 #785a22 #3c2d11;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
+  border-color: black black black;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  *background-color: #785a22;
+  *background-color: black;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 /* line 498, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_mixins.scss */
 .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
   color: white;
-  background-color: #785a22;
-  *background-color: #644b1c;
+  background-color: black;
+  *background-color: black;
 }
 /* line 506, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_mixins.scss */
 .btn-primary:active, .btn-primary.active {
-  background-color: #503c17 \9;
+  background-color: black \9;
   /* IE6-9 */
 }
 
@@ -22678,7 +23475,7 @@ input[type="submit"].btn.btn-mini {
 .btn-link {
   border-color: transparent;
   cursor: pointer;
-  color: #783e22;
+  color: black;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -22686,7 +23483,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 220, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_buttons.scss */
 .btn-link:hover {
-  color: #783e22;
+  color: black;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -22868,7 +23665,7 @@ input[type="submit"].btn.btn-mini {
 }
 /* line 141, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_button-groups.scss */
 .btn-group.open .btn-primary.dropdown-toggle {
-  background-color: #785a22;
+  background-color: black;
 }
 /* line 144, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_button-groups.scss */
 .btn-group.open .btn-warning.dropdown-toggle {
@@ -23137,7 +23934,7 @@ input[type="submit"].btn.btn-mini {
 .nav-list > .active > a:hover {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background-color: #783e22;
+  background-color: black;
 }
 
 /* line 78, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navs.scss */
@@ -23241,7 +24038,7 @@ input[type="submit"].btn.btn-mini {
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
   color: white;
-  background-color: #783e22;
+  background-color: black;
 }
 
 /* line 167, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navs.scss */
@@ -23325,15 +24122,15 @@ input[type="submit"].btn.btn-mini {
 
 /* line 218, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navs.scss */
 .nav .dropdown-toggle .caret {
-  border-top-color: #783e22;
-  border-bottom-color: #783e22;
+  border-top-color: black;
+  border-bottom-color: black;
   margin-top: 6px;
 }
 
 /* line 223, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navs.scss */
 .nav .dropdown-toggle:hover .caret {
-  border-top-color: #783e22;
-  border-bottom-color: #783e22;
+  border-top-color: black;
+  border-bottom-color: black;
 }
 
 /* move down carets for tabs */
@@ -23545,15 +24342,15 @@ input[type="submit"].btn.btn-mini {
   min-height: 56px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #70391f;
-  background-image: -moz-linear-gradient(top, #783e22, #64331c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#783e22), to(#64331c));
-  background-image: -webkit-linear-gradient(top, #783e22, #64331c);
-  background-image: -o-linear-gradient(top, #783e22, #64331c);
-  background-image: linear-gradient(to bottom, #783e22, #64331c);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF783E22, endColorstr=#FF64331C, GradientType=0);
-  border: 1px solid #351b0f;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
+  border: 1px solid black;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -23593,7 +24390,7 @@ input[type="submit"].btn.btn-mini {
   font-size: 20px;
   font-weight: 200;
   color: #777777;
-  text-shadow: 0 1px 0 #783e22;
+  text-shadow: 0 1px 0 black;
 }
 /* line 59, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navbar.scss */
 .navbar .brand:hover {
@@ -23620,8 +24417,8 @@ input[type="submit"].btn.btn-mini {
 .navbar .divider-vertical {
   height: 56px;
   margin: 0 9px;
-  border-left: 1px solid #64331c;
-  border-right: 1px solid #783e22;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
 /* line 93, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navbar.scss */
@@ -23803,7 +24600,7 @@ input[type="submit"].btn.btn-mini {
   padding: 15.5px 15px 15.5px;
   color: #777777;
   text-decoration: none;
-  text-shadow: 0 1px 0 #783e22;
+  text-shadow: 0 1px 0 black;
 }
 
 /* line 243, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navbar.scss */
@@ -23825,7 +24622,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > .active > a:focus {
   color: #555555;
   text-decoration: none;
-  background-color: #502917;
+  background-color: black;
   -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
   -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
@@ -23840,17 +24637,17 @@ input[type="submit"].btn.btn-mini {
   margin-right: 5px;
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #5c2f1a;
-  background-image: -moz-linear-gradient(top, #64331c, #502917);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#64331c), to(#502917));
-  background-image: -webkit-linear-gradient(top, #64331c, #502917);
-  background-image: -o-linear-gradient(top, #64331c, #502917);
-  background-image: linear-gradient(to bottom, #64331c, #502917);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF64331C, endColorstr=#FF502917, GradientType=0);
-  border-color: #502917 #502917 #150b06;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
+  border-color: black black black;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  *background-color: #502917;
+  *background-color: black;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
@@ -23860,12 +24657,12 @@ input[type="submit"].btn.btn-mini {
 /* line 498, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_mixins.scss */
 .navbar .btn-navbar:hover, .navbar .btn-navbar:active, .navbar .btn-navbar.active, .navbar .btn-navbar.disabled, .navbar .btn-navbar[disabled] {
   color: white;
-  background-color: #502917;
-  *background-color: #3c1f11;
+  background-color: black;
+  *background-color: black;
 }
 /* line 506, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_mixins.scss */
 .navbar .btn-navbar:active, .navbar .btn-navbar.active {
-  background-color: #29150b \9;
+  background-color: black \9;
   /* IE6-9 */
 }
 
@@ -23938,7 +24735,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav li.dropdown.open > .dropdown-toggle,
 .navbar .nav li.dropdown.active > .dropdown-toggle,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-  background-color: #502917;
+  background-color: black;
   color: #555555;
 }
 
@@ -24797,7 +25594,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 38, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_thumbnails.scss */
 a.thumbnail:hover {
-  border-color: #783e22;
+  border-color: black;
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
@@ -25740,13 +26537,13 @@ body {
 
 /* line 24, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_scaffolding.scss */
 a {
-  color: #783e22;
+  color: black;
   text-decoration: none;
 }
 
 /* line 28, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_scaffolding.scss */
 a:hover {
-  color: #783e22;
+  color: black;
   text-decoration: underline;
 }
 
@@ -28843,14 +29640,14 @@ table th[class*="span"],
 .dropdown-submenu:hover > a {
   text-decoration: none;
   color: white;
-  background-color: #70391f;
-  background-image: -moz-linear-gradient(top, #783e22, #64331c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#783e22), to(#64331c));
-  background-image: -webkit-linear-gradient(top, #783e22, #64331c);
-  background-image: -o-linear-gradient(top, #783e22, #64331c);
-  background-image: linear-gradient(to bottom, #783e22, #64331c);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF783E22, endColorstr=#FF64331C, GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
 }
 
 /* line 99, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_dropdowns.scss */
@@ -28859,14 +29656,14 @@ table th[class*="span"],
   color: white;
   text-decoration: none;
   outline: 0;
-  background-color: #70391f;
-  background-image: -moz-linear-gradient(top, #783e22, #64331c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#783e22), to(#64331c));
-  background-image: -webkit-linear-gradient(top, #783e22, #64331c);
-  background-image: -o-linear-gradient(top, #783e22, #64331c);
-  background-image: linear-gradient(to bottom, #783e22, #64331c);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF783E22, endColorstr=#FF64331C, GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
 }
 
 /* line 110, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_dropdowns.scss */
@@ -29264,29 +30061,29 @@ input[type="button"].btn-block {
 .btn-primary {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #784922;
-  background-image: -moz-linear-gradient(top, #783e22, #785a22);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#783e22), to(#785a22));
-  background-image: -webkit-linear-gradient(top, #783e22, #785a22);
-  background-image: -o-linear-gradient(top, #783e22, #785a22);
-  background-image: linear-gradient(to bottom, #783e22, #785a22);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF783E22, endColorstr=#FF785A22, GradientType=0);
-  border-color: #785a22 #785a22 #3c2d11;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
+  border-color: black black black;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  *background-color: #785a22;
+  *background-color: black;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 /* line 498, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_mixins.scss */
 .btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
   color: white;
-  background-color: #785a22;
-  *background-color: #644b1c;
+  background-color: black;
+  *background-color: black;
 }
 /* line 506, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_mixins.scss */
 .btn-primary:active, .btn-primary.active {
-  background-color: #503c17 \9;
+  background-color: black \9;
   /* IE6-9 */
 }
 
@@ -29486,7 +30283,7 @@ input[type="submit"].btn.btn-mini {
 .btn-link {
   border-color: transparent;
   cursor: pointer;
-  color: #783e22;
+  color: black;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
@@ -29494,7 +30291,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 220, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_buttons.scss */
 .btn-link:hover {
-  color: #783e22;
+  color: black;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -29676,7 +30473,7 @@ input[type="submit"].btn.btn-mini {
 }
 /* line 141, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_button-groups.scss */
 .btn-group.open .btn-primary.dropdown-toggle {
-  background-color: #785a22;
+  background-color: black;
 }
 /* line 144, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_button-groups.scss */
 .btn-group.open .btn-warning.dropdown-toggle {
@@ -29945,7 +30742,7 @@ input[type="submit"].btn.btn-mini {
 .nav-list > .active > a:hover {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background-color: #783e22;
+  background-color: black;
 }
 
 /* line 78, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navs.scss */
@@ -30049,7 +30846,7 @@ input[type="submit"].btn.btn-mini {
 .nav-pills > .active > a,
 .nav-pills > .active > a:hover {
   color: white;
-  background-color: #783e22;
+  background-color: black;
 }
 
 /* line 167, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navs.scss */
@@ -30133,15 +30930,15 @@ input[type="submit"].btn.btn-mini {
 
 /* line 218, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navs.scss */
 .nav .dropdown-toggle .caret {
-  border-top-color: #783e22;
-  border-bottom-color: #783e22;
+  border-top-color: black;
+  border-bottom-color: black;
   margin-top: 6px;
 }
 
 /* line 223, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navs.scss */
 .nav .dropdown-toggle:hover .caret {
-  border-top-color: #783e22;
-  border-bottom-color: #783e22;
+  border-top-color: black;
+  border-bottom-color: black;
 }
 
 /* move down carets for tabs */
@@ -30353,15 +31150,15 @@ input[type="submit"].btn.btn-mini {
   min-height: 56px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: #70391f;
-  background-image: -moz-linear-gradient(top, #783e22, #64331c);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#783e22), to(#64331c));
-  background-image: -webkit-linear-gradient(top, #783e22, #64331c);
-  background-image: -o-linear-gradient(top, #783e22, #64331c);
-  background-image: linear-gradient(to bottom, #783e22, #64331c);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF783E22, endColorstr=#FF64331C, GradientType=0);
-  border: 1px solid #351b0f;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
+  border: 1px solid black;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -30401,7 +31198,7 @@ input[type="submit"].btn.btn-mini {
   font-size: 20px;
   font-weight: 200;
   color: #777777;
-  text-shadow: 0 1px 0 #783e22;
+  text-shadow: 0 1px 0 black;
 }
 /* line 59, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navbar.scss */
 .navbar .brand:hover {
@@ -30428,8 +31225,8 @@ input[type="submit"].btn.btn-mini {
 .navbar .divider-vertical {
   height: 56px;
   margin: 0 9px;
-  border-left: 1px solid #64331c;
-  border-right: 1px solid #783e22;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
 /* line 93, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navbar.scss */
@@ -30611,7 +31408,7 @@ input[type="submit"].btn.btn-mini {
   padding: 15.5px 15px 15.5px;
   color: #777777;
   text-decoration: none;
-  text-shadow: 0 1px 0 #783e22;
+  text-shadow: 0 1px 0 black;
 }
 
 /* line 243, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_navbar.scss */
@@ -30633,7 +31430,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > .active > a:focus {
   color: #555555;
   text-decoration: none;
-  background-color: #502917;
+  background-color: black;
   -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
   -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
@@ -30648,17 +31445,17 @@ input[type="submit"].btn.btn-mini {
   margin-right: 5px;
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #5c2f1a;
-  background-image: -moz-linear-gradient(top, #64331c, #502917);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#64331c), to(#502917));
-  background-image: -webkit-linear-gradient(top, #64331c, #502917);
-  background-image: -o-linear-gradient(top, #64331c, #502917);
-  background-image: linear-gradient(to bottom, #64331c, #502917);
+  background-color: black;
+  background-image: -moz-linear-gradient(top, black, black);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(black), to(black));
+  background-image: -webkit-linear-gradient(top, black, black);
+  background-image: -o-linear-gradient(top, black, black);
+  background-image: linear-gradient(to bottom, #000000, #000000);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF64331C, endColorstr=#FF502917, GradientType=0);
-  border-color: #502917 #502917 #150b06;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF000000, endColorstr=#FF000000, GradientType=0);
+  border-color: black black black;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) fadein(rgba(0, 0, 0, 0.1), 15%);
-  *background-color: #502917;
+  *background-color: black;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.075);
@@ -30668,12 +31465,12 @@ input[type="submit"].btn.btn-mini {
 /* line 498, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_mixins.scss */
 .navbar .btn-navbar:hover, .navbar .btn-navbar:active, .navbar .btn-navbar.active, .navbar .btn-navbar.disabled, .navbar .btn-navbar[disabled] {
   color: white;
-  background-color: #502917;
-  *background-color: #3c1f11;
+  background-color: black;
+  *background-color: black;
 }
 /* line 506, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_mixins.scss */
 .navbar .btn-navbar:active, .navbar .btn-navbar.active {
-  background-color: #29150b \9;
+  background-color: black \9;
   /* IE6-9 */
 }
 
@@ -30746,7 +31543,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav li.dropdown.open > .dropdown-toggle,
 .navbar .nav li.dropdown.active > .dropdown-toggle,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-  background-color: #502917;
+  background-color: black;
   color: #555555;
 }
 
@@ -31605,7 +32402,7 @@ input[type="submit"].btn.btn-mini {
 
 /* line 38, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_thumbnails.scss */
 a.thumbnail:hover {
-  border-color: #783e22;
+  border-color: black;
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
@@ -33636,7 +34433,7 @@ a.label:hover, a.badge:hover {
   /* line 85, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_responsive-navbar.scss */
   .nav-collapse .nav > li > a:hover,
   .nav-collapse .dropdown-menu a:hover {
-    background-color: #64331c;
+    background-color: black;
   }
 
   /* line 89, /Users/MacBookPro/.rvm/gems/ruby-2.0.0-p247/gems/bootstrap-sass-rails-2.2.2.1/vendor/assets/stylesheets/twitter/bootstrap/_responsive-navbar.scss */
@@ -33704,8 +34501,8 @@ a.label:hover, a.badge:hover {
     float: none;
     padding: 12.5px 15px;
     margin: 12.5px 0;
-    border-top: 1px solid #64331c;
-    border-bottom: 1px solid #64331c;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
     -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -35900,34 +36697,54 @@ a.label:hover, a.badge:hover {
   content: "\f196";
 }
 
-/* line 3, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 4, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+#contentr-overlay-close {
+  background: none !important;
+  background-color: white !important;
+  cursor: pointer !important;
+  border-radius: 5px !important;
+  text-align: center !important;
+  height: 30px !important;
+  width: 30px !important;
+  line-height: 30px !important;
+  border: 2px solid black !important;
+  color: black !important;
+  font-weight: bold;
+}
+
+/* line 18, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+.centered {
+  text-align: center;
+}
+
+/* line 22, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 .contentr-area {
   position: relative !important;
   width: 100% !important;
   margin-left: 0 !important;
   margin-top: 0 !important;
 }
-/* line 8, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 27, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 .contentr-area .toolbar {
   padding-left: 0;
   padding-right: 0;
   background-color: #000000;
   border: none;
 }
-/* line 13, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 32, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 .contentr-area .toolbar .btn_area {
   text-align: right;
 }
-/* line 17, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 36, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 .contentr-area .toolbar .row-fluid .span10 {
   min-height: 10px !important;
 }
-/* line 20, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 39, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 .contentr-area .toolbar .row-fluid .span2 {
   min-height: 10px !important;
 }
 @media (min-width: 1200px) {
-  /* line 25, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+  /* line 44, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
   .contentr-area .toolbar .btn-mini {
     min-width: 20px;
     height: 17px !important;
@@ -35936,16 +36753,16 @@ a.label:hover, a.badge:hover {
   }
 }
 @media (max-width: 1200px) {
-  /* line 33, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+  /* line 52, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
   .contentr-area .toolbar .span2 {
     margin-left: 0px;
     width: 100%;
   }
-  /* line 37, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+  /* line 56, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
   .contentr-area .toolbar .span10 {
     width: 100%;
   }
-  /* line 40, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+  /* line 59, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
   .contentr-area .toolbar .btn-mini {
     box-sizing: border-box;
     width: 100% !important;
@@ -35953,79 +36770,79 @@ a.label:hover, a.badge:hover {
     line-height: 17px !important;
   }
 }
-/* line 47, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 66, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 .contentr-area .toolbar .area-name, .contentr-area .toolbar .page-classname, .contentr-area .toolbar .page-urlpath {
   margin-left: 10px;
   color: #FFFFFF;
   text-shadow: none;
 }
-/* line 52, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 71, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 .contentr-area .toolbar .page-classname {
   color: #FFFFFF;
   text-shadow: none;
 }
-/* line 56, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 75, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 .contentr-area .toolbar .page-urlpath {
   color: #FFFFFF;
   text-shadow: none;
 }
-/* line 60, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 79, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 .contentr-area .toolbar .handle {
   margin-left: 10px;
   text-shadow: none;
   color: #FFFFFF;
 }
-/* line 67, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 86, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 .contentr-area .paragraph .paragraph_text {
   padding-top: 25px;
 }
-/* line 70, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 89, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 .contentr-area .paragraph .toolbar {
   background-color: #000000;
   border: none;
   border-top: 1px solid white;
 }
 
-/* line 78, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 97, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 #contentr-style-node .control-label {
   text-align: left;
   font-size: 12px;
   font-weight: bold;
 }
 @media (max-width: 1200px) {
-  /* line 84, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+  /* line 103, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
   #contentr-style-node .centered {
     text-align: center;
   }
-  /* line 87, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+  /* line 106, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
   #contentr-style-node .span6 {
     width: 100%;
   }
 }
-/* line 91, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 110, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 #contentr-style-node .navbar {
   background-color: #000000;
   border-radius: 0px !important;
 }
-/* line 94, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 113, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 #contentr-style-node .navbar .navbar-inner {
   padding: 0 !important;
 }
-/* line 97, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 116, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 #contentr-style-node .navbar .navbar-inner .brand {
   color: #FFFFFF;
   text-shadow: none;
   margin-left: 25px;
 }
-/* line 102, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 121, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 #contentr-style-node .navbar .navbar-inner .nav {
   margin-bottom: 5px !important;
 }
-/* line 104, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 123, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 #contentr-style-node .navbar .navbar-inner .nav li {
   display: none;
 }
-/* line 109, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 128, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 #contentr-style-node .navbar .navbar-inner {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -36033,21 +36850,21 @@ a.label:hover, a.badge:hover {
   background: none;
   border: none;
 }
-/* line 115, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 134, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 #contentr-style-node .navbar .nav-tabs {
   border: none;
 }
-/* line 117, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 136, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 #contentr-style-node .navbar .nav-tabs > li {
   margin-bottom: 0;
 }
-/* line 123, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 142, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 #contentr-style-node .navbar .nav > li > a,
 #contentr-style-node .navbar .nav > li > a:focus,
 #contentr-style-node .navbar .nav > li > a:hover {
   border: none;
 }
-/* line 129, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
+/* line 148, /Users/MacBookPro/code/koehlers-landgasthaus/app/assets/stylesheets/custom_contentr.css.scss */
 #contentr-style-node .navbar .nav > .active > a,
 #contentr-style-node .navbar .nav > .active > a:hover,
 #contentr-style-node .navbar .nav > .active > a:focus {

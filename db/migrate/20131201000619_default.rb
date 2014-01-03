@@ -27,14 +27,16 @@ class Default < ActiveRecord::Migration
     # add_index :users, :unlock_token,         :unique => true
 
     create_table :events do |t|
-      t.string :title
-      t.string :type
-      t.string :subtitle
-      t.text :body
-      t.boolean :active
-      t.boolean :highlight
-      t.boolean :flyer
-      t.boolean :collage
+      t.string    :title
+      t.string    :type
+      t.string    :area
+      t.string    :subtitle
+      t.datetime  :start_at
+      t.datetime  :end_at
+      t.string    :image
+      t.text      :body
+      t.boolean   :active
+      t.boolean   :highlight
       t.timestamps
     end
 
