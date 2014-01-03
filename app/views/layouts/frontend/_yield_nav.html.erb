@@ -3,10 +3,12 @@
     <%= image_tag 'navdivider.png', class: 'navdivider rotated-180' %>
   </div>
   <ul class='custom_nav' type='none'>
-    <% @paragraphs.each do |anchor| %>
-      <% if anchor.data['link_title'] != nil %>
-        <% name = href = anchor.data['link_title'] %>
-        <li><a href='#<%= href %>'><%= name %></a></li>
+    <% if @paragraphs.present? %>
+      <% @paragraphs.each do |anchor| %>
+        <% if anchor.data['link_title'] != nil %>
+          <% name = href = anchor.data['link_title'] %>
+          <li><a href='#<%= href %>'><%= name %></a></li>
+        <% end -%>
       <% end -%>
     <% end -%>
   </ul>
