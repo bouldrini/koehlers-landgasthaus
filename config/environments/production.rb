@@ -33,7 +33,7 @@ LandgasthausKoehler::Application.configure do
 
   # Version of your assets, change this if you want to expire all your assets.
   config.assets.version = '1.0'
-  config.assets.precompile += ['*custom_contentr*', '*backend/application.js', '*backend/application.scss', '*frontend/application.css.scss', '*frontend/application.js']
+  config.assets.precompile += ['*contentr_stylesheet*', '*contentr_javascript*', '*backend/application.js', '*backend/application.scss', '*frontend/application.css.scss', '*frontend/application.js']
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
