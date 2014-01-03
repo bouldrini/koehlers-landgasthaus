@@ -16,7 +16,7 @@
           start_at: "<%= nicedate(e.start_at) %>",
           end_at: "<%= nicedate(e.end_at) %>",
           image: "<%= e.image_url %>",
-          body: "<%= e.body.html_safe %>",
+          body: "<%= e.body.present? ? e.body.html_safe : '' %>",
           highlight: "<%= e.highlight %>"
           }
           <%= ',' unless i >= (@events.length + 1) %>
