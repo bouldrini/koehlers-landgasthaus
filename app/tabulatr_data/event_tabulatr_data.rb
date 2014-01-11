@@ -1,5 +1,6 @@
 class EventTabulatrData < Tabulatr::Data
   search :title
+  column :id
   column :title
   column :type
   column :image do |rec|
