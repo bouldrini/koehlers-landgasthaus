@@ -33,7 +33,7 @@ LandgasthausKoehler::Application.configure do
 
   # Version of your assets, change this if you want to expire all your assets.
   config.assets.version = '1.0'
-  config.assets.precompile += ["*frontend/*", "*backend/*", "*contentr/*", "*gmaps4rails/*", "*application.js", "contentr_javascript.js", "contentr_stylesheet.css.scss", "evil_hack.css"]3
+  config.assets.precompile += ["*frontend/*", "*backend/*", "*contentr/*", "*gmaps4rails/*", "*application.js", "contentr_javascript.js", "contentr_stylesheet.css.scss", "evil_hack.css"]
   #['*backend/application.js', '*backend/application.scss',
   #'*frontend/application.css.scss', '*frontend/application.js',
   #'*contentr_stylesheet.css.scss', '*contentr_javascript.js']
