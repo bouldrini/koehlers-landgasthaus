@@ -9,6 +9,6 @@ Contentr.setup do |config|
   config.register_paragraph(Contentr::ImageTextParagraph, 'Bild | Text - Element')
   config.register_paragraph(Contentr::BannerTextParagraph, 'Banner | Text - Element')
   config.register_paragraph(Contentr::GalleryTextParagraph, 'Gallerie | Text - Element')
-  config.additional_admin_stylesheets << 'contentr_stylesheet'
-  config.additional_admin_javascripts << 'contentr_javascript'
+  config.additional_admin_stylesheets << 'frontend/contentr_stylesheet'
+  config.additional_admin_javascripts << 'frontend/contentr_javascript'
 end
