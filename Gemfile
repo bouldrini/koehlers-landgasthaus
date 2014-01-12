@@ -25,7 +25,7 @@ gem 'iconv'
 gem 'devise'
 gem 'quiet_assets'
 gem "font-awesome-rails"
-gem "bootstrap-wysihtml5-rails", git: "https://git@github.com:RichardWieditz/bootstrap-wysihtml5-rails.git"
+gem "bootstrap-wysihtml5-rails", git: "https://github.com/RichardWieditz/bootstrap-wysihtml5-rails"
 gem 'tabulatr2', git: 'https://github.com/provideal/tabulatr2'
 gem 'carrierwave', '~> 0.8.0'
 gem 'chosen-rails', "~> 1.0.0"

@@ -7,7 +7,7 @@ GIT
       rails (>= 4.0.0)
 
 GIT
-  remote: git@github.com:RichardWieditz/bootstrap-wysihtml5-rails.git
+  remote: https://github.com/RichardWieditz/bootstrap-wysihtml5-rails
   revision: b3f8d97526c775de9a07e56166595e150b220729
   specs:
     bootstrap-wysihtml5-rails (0.3.1.23)
