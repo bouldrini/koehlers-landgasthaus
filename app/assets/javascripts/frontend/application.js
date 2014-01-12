@@ -5,6 +5,7 @@
 //= require twitter/bootstrap
 //= require bootstrap-wysihtml5
 //= require contentr
+
 //= require jquery.minicolors
 //= require ./invoke_minicolors
 //= require ./navbar
@@ -12,3 +13,4 @@
 //= require ./typographical_effects
 //= require fullcalendar
 //= require ./initialize
+//= require ./contentr_javascript
