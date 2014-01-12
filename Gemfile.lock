@@ -7,16 +7,25 @@ GIT
       rails (>= 4.0.0)
 
 GIT
+  remote: git@github.com:RichardWieditz/bootstrap-wysihtml5-rails.git
+  revision: b3f8d97526c775de9a07e56166595e150b220729
+  specs:
+    bootstrap-wysihtml5-rails (0.3.1.23)
+      font-awesome-rails
+      railties (>= 3.0)
+
+GIT
   remote: https://github.com/RichardWieditz/contentr.git
-  revision: bf2048382614022f3c9e2c655e388e9ca15441a0
+  revision: 4bbcb7b0d3bbb19e6bca0ba8cd6a93c72a586d31
   branch: activerecord
   specs:
     contentr (0.1.0)
       ancestry
       bootstrap-sass (> 2.1)
-      bootstrap-wysihtml5-rails
+      bootstrap-wysihtml5-rails (~> 0.3.1.23)
       bson_ext (~> 1.5)
       compass-rails (= 2.0.alpha.0)
+      font-awesome-rails
       rails (>= 4.0.0)
       rake (~> 0.9.2.2)
       sass-rails
@@ -71,8 +80,6 @@ GEM
     bootstrap-sass-rails (2.2.2.1)
       railties (>= 3.1.0)
       sass-rails (>= 3.1.0)
-    bootstrap-wysihtml5-rails (0.3.1.23)
-      railties (>= 3.0)
     bson (1.9.2)
     bson_ext (1.9.2)
       bson (~> 1.9.2)
@@ -218,7 +225,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass-rails (~> 2.2.2.0)
-  bootstrap-wysihtml5-rails (~> 0.3.1.23)
+  bootstrap-wysihtml5-rails!
   carrierwave (~> 0.8.0)
   chosen-rails (~> 1.0.0)
   coffee-rails
