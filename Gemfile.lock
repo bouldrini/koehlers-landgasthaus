@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: https://github.com/RichardWieditz/contentr.git
-  revision: 4bbcb7b0d3bbb19e6bca0ba8cd6a93c72a586d31
+  revision: ab4c68a6df7056425b632a9f3d61b00586e5ac5a
   branch: activerecord
   specs:
     contentr (0.1.0)
