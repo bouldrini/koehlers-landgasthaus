@@ -101,9 +101,8 @@ body.noscroll{
 
 .footer{
   position: static;
-  height:40px;
-  padding-top:5px;
-  padding-bottom:5px;
+  padding-top:15px;
+  padding-bottom:15px;
   color:white;
   text-align: right;
   width:100%;
@@ -111,7 +110,7 @@ body.noscroll{
   background: rgba($primaryColor, 1);
   a{
     color:white;
-    margin-right: 20px;
+    margin-right: 50px;
     font-size:20px;
   }
   a:hover{
@@ -120,11 +119,15 @@ body.noscroll{
 }
 
 @media (max-width: $phoneSnap){
+  .nav-container{
+    margin-left:0px;
+  }
   .footer{
     display: none !important;
   }
 
   .brand{
+    margin-left:40px;
     font-size:30px;
   }
 
@@ -385,6 +388,7 @@ body.noscroll{
   }
   @media (max-width: $phoneSnap){
     .nav-container{
+      margin-left: 0px ;
       position: absolute;
       height:100%;
       width:100%;
