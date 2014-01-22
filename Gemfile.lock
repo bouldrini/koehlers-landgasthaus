@@ -15,16 +15,9 @@ GIT
       railties (>= 3.0)
 
 GIT
-  remote: https://github.com/provideal/tabulatr2
-  revision: 1afcbcda875e0a22a86a77632e94dc1cecc579cf
-  specs:
-    tabulatr2 (0.9.2)
-      activerecord_outer_joins (~> 0.0.1)
-      rails (>= 4.0.0)
-      slim (>= 2.0.1)
-
-PATH
-  remote: ~/code/contentr
+  remote: https://github.com/RichardWieditz/contentr.git
+  revision: 0af1e71d0b6052be99f364e68e1f5e92737341f0
+  branch: smart_flower
   specs:
     contentr (0.1.0)
       ancestry
@@ -38,6 +31,15 @@ PATH
       sass-rails
       simple_form (~> 3.0.0)
       tabulatr2
+
+GIT
+  remote: https://github.com/provideal/tabulatr2
+  revision: 1afcbcda875e0a22a86a77632e94dc1cecc579cf
+  specs:
+    tabulatr2 (0.9.2)
+      activerecord_outer_joins (~> 0.0.1)
+      rails (>= 4.0.0)
+      slim (>= 2.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -227,7 +229,7 @@ DEPENDENCIES
   carrierwave (~> 0.8.0)
   chosen-rails (~> 1.0.0)
   coffee-rails
-  compass-rails
+  compass-rails (> 1.1.3)
   contentr!
   cruddler!
   debugger
