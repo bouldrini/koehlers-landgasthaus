@@ -18,9 +18,7 @@ gem 'jquery-rails'
 gem 'rails-i18n'
 gem 'mini_magick'
 gem 'gmaps4rails', '1.5.6'
-gem 'iconv'
 gem 'devise'
-gem 'quiet_assets'
 gem "font-awesome-rails"
 gem "bootstrap-wysihtml5-rails", git: "https://github.com/RichardWieditz/bootstrap-wysihtml5-rails"
 gem 'tabulatr2', git: 'https://github.com/provideal/tabulatr2'

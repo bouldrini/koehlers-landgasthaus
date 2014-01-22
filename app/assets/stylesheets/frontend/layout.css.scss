@@ -1,3 +1,12 @@
+#wrapper{
+  position: relative;
+  min-height:100%;
+}
+
+body{
+  height:100% !important;
+}
+
 .brand{
   // -moz-transform: rotate(-20deg);
   // -ms-transform: rotate(-20deg);
@@ -15,10 +24,6 @@
   .fc-event{
     cursor:pointer;
   }
-}
-body{
-  // background-image: image-url("testtexture.jpg");
-  // background-size:100%;
 }
 
 .background-image{
@@ -106,7 +111,8 @@ body.noscroll{
   color:white;
   text-align: right;
   width:100%;
-  bottom:0px;
+  bottom:0;
+  height:27px;
   background: rgba($primaryColor, 1);
   a{
     color:white;

@@ -20,7 +20,6 @@
   )
 
 @plugins = () ->
-  console.log 'alive'
   textareas = $('.html_editor')
   $.each(textareas, (index, obj) ->
     $(obj).wysihtml5();

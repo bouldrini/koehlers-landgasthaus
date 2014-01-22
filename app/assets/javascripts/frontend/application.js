@@ -13,4 +13,5 @@
 //= require ./typographical_effects
 //= require fullcalendar
 //= require ./initialize
+//= require ./footer
 //= require ./contentr_javascript
