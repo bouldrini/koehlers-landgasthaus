@@ -34,9 +34,9 @@ GIT
 
 GIT
   remote: https://github.com/provideal/tabulatr2
-  revision: a94d1087fe979828b3821620adb80755cac76462
+  revision: 1afcbcda875e0a22a86a77632e94dc1cecc579cf
   specs:
-    tabulatr2 (0.9.1)
+    tabulatr2 (0.9.2)
       activerecord_outer_joins (~> 0.0.1)
       rails (>= 4.0.0)
       slim (>= 2.0.1)

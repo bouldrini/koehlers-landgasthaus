@@ -1,7 +1,8 @@
 @charset "UTF-8";
 
 // Global definements
-$primaryColor: darken(#000000, 10%);
+// 700100
+$primaryColor: #600800;
 $secondaryColor: #8B4726;
 $tabletSnap: 1200px;
 $phoneSnap: 500px;
@@ -40,9 +41,9 @@ $mobileTabMargin: 5px;
 @import 'twitter/bootstrap/responsive';
 
 // Global fonts
-// @import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700");
-// @import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600");
-
+@import url("http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600");
+@import url("http://fonts.googleapis.com/css?family=Radley");
 // Use FontAwesome
 $fontAwesomePath: "/assets";
 @import "font-awesome";

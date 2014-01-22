@@ -4,6 +4,7 @@ module Contentr
       # Fields
       field :link_title, :type => 'String'
       field :image, :uploader => Contentr::FileUploader
+      field :background_image, :uploader => Contentr::FileUploader
       field :body, :type => 'String'
       # Validations
     end
