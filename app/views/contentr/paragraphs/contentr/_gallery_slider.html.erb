@@ -5,12 +5,14 @@
         <% Event.all.each_with_index do |event, i| %>
 
             <div class="sl-slide bg-<%= i+1 %>">
-                <div class="sl-slide-inner">
+                <div class="sl-slide-inner" style='background-image: url("<%= event.image.url %>"); background-size: 100%;'>
                     <div class="deco" data-icon="H"></div>
-                    <h2><%= event.title %></h2>
-                    <blockquote>
-                    <%= nicedate(event.start_at) %> - <%= nicedate(event.end_at) %>
-                    </blockquote>
+                    <div class='desc_box'>
+                        <h2><%= event.title %></h2>
+                        <blockquote>
+                        <%= nicedate(event.start_at) %> - <%= nicedate(event.end_at) %>
+                        </blockquote>
+                    </div>
                 </div>
             </div>
 
@@ -24,7 +26,7 @@
 
     <nav id="nav-dots" class="nav-dots">
         <span class="nav-dot-current"></span>
-        <% Event.all.count.times do |event| %>
+        <% (Event.all.count-1).times do |event| %>
             <span></span>
         <% end -%>
     </nav>

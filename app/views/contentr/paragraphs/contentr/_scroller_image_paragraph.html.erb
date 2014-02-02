@@ -1,3 +1,5 @@
 <div class='scroller-wrapper'>
-  <%= image_tag paragraph.image.url if paragraph.image.present? %>
+  <%= image_tag paragraph.desktop_image.url, class: 'desktop_image' if paragraph.desktop_image.present? %>
+  <%= image_tag paragraph.tablet_image.url, class: 'tablet_image' if paragraph.tablet_image.present? %>
+  <%= image_tag paragraph.phone_image.url, class: 'phone_image' if paragraph.phone_image.present? %>
 </div>
