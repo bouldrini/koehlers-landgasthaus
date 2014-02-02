@@ -9,6 +9,8 @@ Contentr.setup do |config|
   config.register_paragraph(Contentr::ImageTextParagraph, 'Bild | Text - Element')
   config.register_paragraph(Contentr::BannerTextParagraph, 'Banner | Text - Element')
   config.register_paragraph(Contentr::GalleryTextParagraph, 'Gallerie | Text - Element')
+  config.register_paragraph(Contentr::ScrollerImageParagraph, 'Titelbild - Element (nicht verwenden!)')
+  config.register_paragraph(Contentr::EventGalleryParagraph, 'Eventgallerie (max. eine)')
   config.additional_admin_stylesheets << 'frontend/contentr_stylesheet'
   config.additional_admin_javascripts << 'frontend/contentr_javascript'
 end

@@ -1,0 +1,32 @@
+<div id="slider" class="sl-slider-wrapper">
+
+    <div class="sl-slider">
+
+        <% Event.all.each_with_index do |event, i| %>
+
+            <div class="sl-slide bg-<%= i+1 %>">
+                <div class="sl-slide-inner">
+                    <div class="deco" data-icon="H"></div>
+                    <h2><%= event.title %></h2>
+                    <blockquote>
+                    <%= nicedate(event.start_at) %> - <%= nicedate(event.end_at) %>
+                    </blockquote>
+                </div>
+            </div>
+
+        <% end -%>
+
+
+    <nav id="nav-arrows" class="nav-arrows">
+        <span class="nav-arrow-prev">Previous</span>
+        <span class="nav-arrow-next">Next</span>
+    </nav>
+
+    <nav id="nav-dots" class="nav-dots">
+        <span class="nav-dot-current"></span>
+        <% Event.all.count.times do |event| %>
+            <span></span>
+        <% end -%>
+    </nav>
+
+</div>

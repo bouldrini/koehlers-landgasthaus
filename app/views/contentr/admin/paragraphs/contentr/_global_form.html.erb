@@ -2,11 +2,11 @@
   <div class='row-fluid'>
     <% @paragraph.class.form_fields.each do |ff| %>
       <% label = @paragraph.class.human_attribute_name(ff[:name]) %>
-      <% rows = (ff[:name].to_s == 'body' ? 15 : nil ) %>
-      <%= f.input ff[:name], as: ff[:typ], :label => label, :label_html => { :style => "float:none; text-align:left" }, input_html: {class: "span6 #{(ff[:name].to_s == 'body') ? 'html_editor' : ''}", rows: rows} %>
-      <% if ff[:typ] == :file && @paragraph.image.present? %>
-      Remove current image: <input type="checkbox" name="paragraph[remove_image]" value="<%= ff[:name] %>">
-      <% end %>
+      <% if ff[:name] == :background_gallery %>
+        <%= f.input ff[:name], collection: Gallery.all.map{|g|[g.title, g.id]}, default: @paragraph.background_gallery || 1, :label => label, :label_html => { :style => "float:none; text-align:left" }, input_html: {class: 'span6'} %>
+        <% next %>
+      <% end -%>
+      <%= f.input ff[:name], as: ff[:typ], :label => label, :label_html => { :style => "float:none; text-align:left" }, input_html: {class: 'span6'} %>
     <% end %>
     <div class='well centered'>
       <%= f.submit "#{btn_text}", class: 'btn btn-inverse btn-small' %>

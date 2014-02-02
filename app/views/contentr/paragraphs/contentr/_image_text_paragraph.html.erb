@@ -18,6 +18,14 @@
           </div>
         </div>
       </div>
+      <div class='row-fluid'>
+      <div class='span6'>
+      </div>
+      <div class='span6 hidden'>
+        <div class='paragraph_slide_down'>
+        <%= image_tag(paragraph.image.url || paragraph.image.model['file'], style: 'width:100%') if paragraph.image_id.present? %>
+      </div>
+      </div>
     </div>
   </div>
 </div>

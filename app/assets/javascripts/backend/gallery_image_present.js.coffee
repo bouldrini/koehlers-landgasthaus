@@ -7,11 +7,11 @@ jQuery ($) ->
     if active == 'false'
       $('.gallery_image_present').slideDown('slow')
       status = 'true'
-      tag = "icon-chevron-up"
+      tag = "icon-chevron-up icon-white"
     else if active == 'true'
       $('.gallery_image_present').slideUp('slow')
       status = 'false'
-      tag = 'icon-chevron-down'
+      tag = 'icon-chevron-down icon-white'
     $(this).attr('data-active', status)
     $(this).html('Gallerie: <i class="' + tag + '"></i>')
 

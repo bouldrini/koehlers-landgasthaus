@@ -1,11 +1,11 @@
 <div class='gallery_image_present'>
-  <% @gallery.gallery_images.in_groups_of(5, false)  do |images| %>
+  <% @gallery.gallery_images.in_groups_of(2, false)  do |images| %>
     <div class='gallery_image_line'>
       <% images.each do |image| %>
         <div class='gallery_image_box' id="<%=image.id%>">
           <%= image_tag image.image, class: 'gallery_image_tag' %>
           <div class='gallery_image_box_btn_panel'>
-            <div class='delete_image btn btn-danger' data-url='<%= backend_landgasthaus_gallery_image_path(image) %>' id="<%=image.id%>"><i class='icon-trash'></i></div>
+            <div class='delete_image btn btn-danger' data-url='<%= backend_landgasthaus_gallery_image_path(image) %>' id="<%=image.id%>"><i class='icon-trash icon-white'></i></div>
           </div>
         </div>
       <% end -%>

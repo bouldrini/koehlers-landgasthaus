@@ -20,6 +20,7 @@
     <div class='open-nav-slider'>
       <%= fa_icon "list 2x" %>
     </div>
+    <%= contentr_area :scroller %>
     <div class='lghk-wrapper'>
       <div class='row scaff_row headline'>
         <div class='brand'>Köhler's Landgasthaus</div>
@@ -39,8 +40,8 @@
         </div>
       </div>
     </div>
-    <%= render partial: 'layouts/frontend/event_box' %>
     <%= render partial: 'layouts/frontend/footer' %>
+    <%= render partial: 'layouts/frontend/notices', locals: {events: @events} %>
   </body>
 </html>
 <script src="http://twitter.github.com/hogan.js/builds/2.0.0/hogan-2.0.0.js"></script>

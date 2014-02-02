@@ -37,10 +37,6 @@ class Backend::Landgasthaus::GalleriesController < Backend::ApplicationControlle
         images.each do |img|
           gal_img = GalleryImage.link(img, @gallery)
         end
-        @gallery.gallery_sliders.each do |slider|
-          slider.images = "#{@gallery.gallery_images.map(&:image).join(', ')}"
-          slider.save
-        end
       end
     redirect_to backend_landgasthaus_galleries_path
     else

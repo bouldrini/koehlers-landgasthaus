@@ -5,13 +5,18 @@
 //= require twitter/bootstrap
 //= require bootstrap-wysihtml5
 //= require contentr
-
+//= require ./greensock/application
 //= require jquery.minicolors
+//= require ../gmaps4rails/application
+//= require fullcalendar
+//= require ./contentr_javascript
+//= require ./scroll_stop
+
 //= require ./invoke_minicolors
 //= require ./navbar
-//= require ../gmaps4rails/application
-//= require ./typographical_effects
-//= require fullcalendar
 //= require ./initialize
 //= require ./footer
-//= require ./contentr_javascript
+//= require ./typographical_effects
+//= require ./modernizr.custom.79639
+//= require ./jquery.slitslider
+//= require ./jquery.ba-cond.min

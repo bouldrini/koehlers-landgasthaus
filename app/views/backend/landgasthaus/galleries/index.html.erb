@@ -8,8 +8,8 @@
 		<% end -%>
 	</div>
 </div>
-<div class='form_row form_panel'>
-	<div class='inset'>
-		<%= render partial: 'backend/landgasthaus/galleries/gallery_schedule', locals: {galleries: @galleries} %>
-	</div>
+<div class='form_row'>
+  <div class='form_panel'>
+    <%= table_for Gallery %>
+  </div>
 </div>

@@ -1,3 +1,6 @@
+<%= content_for(:subnav) do %>
+  <%= link_to backend_landgasthaus_events_path, style: 'color:black' do %><div class='btn btn-inverse btn-small'>Zur Übersicht</div><% end -%>
+<% end -%>
 <%= simple_form_for [:backend, :landgasthaus ,@gallery] do |f| %>
     <div class='row'>
         <div class='span4'>
@@ -14,7 +17,7 @@
             <% end -%>
         </div>
         <div class='span4'>
-            <div class='gallery_image_present_toogle btn btn-inverse' data-active="false">Gallerie: <i class='icon-chevron-down'></i></div>
+            <div class='gallery_image_present_toogle btn btn-inverse' data-active="false">Gallerie: <i class='icon-chevron-down icon-white'></i></div>
         </div>
     </div>
     <div class='row'>
@@ -23,9 +26,11 @@
         <% end -%>
     </div>
     <div class='row'>
-        <div class='span8'>
+        <div class='span12'>
             <%= f.input :description, input_html: {style: 'height:100px; width:100%', class: "wysihtml5-textarea"} %>
         </div>
     </div>
-    <%= f.button :submit, class: 'dark_nav_sub_btn' %>
+    <div class='well centered'>
+      <%= f.button :submit, class: 'dark_nav_sub_btn' %>
+    </div>
 <% end -%>

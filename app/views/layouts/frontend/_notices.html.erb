@@ -1,0 +1,15 @@
+<% events.each do |notice| %>
+  <div class='notice' id='<%= notice.id %>'>
+    <div class='present'>
+      <div>
+        <%= image_tag notice.image.url %>
+        <!-- <div class='notice-primary'><%#= nicedate(notice.start_at) %> - <%#= nicedate(notice.end_at) %></div>
+      </div>
+      <div>
+        <div class='quotation'>
+          <%#= notice.title %>
+        </div> -->
+      </div>
+    </div>
+  </div>
+<% end -%>

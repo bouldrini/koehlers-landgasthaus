@@ -2,7 +2,7 @@ class Gallery < ActiveRecord::Base
   attr_accessor :images
   permitted_attributes :id, :title, :subtitle, :description, :images => []
   # RELATIONS
-  has_many    :gallery_sliders
+
   has_many    :gallery_mappings, dependent: :destroy
   has_many    :gallery_images, dependent: :destroy
   has_many    :pdf_mappings, as: :owner

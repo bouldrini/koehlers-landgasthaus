@@ -1,13 +1,4 @@
 <%= content_for(:title) do %>
     Gallerie bearbeiten
 <% end -%>
-<div class='row-fluid'>
-    <div class='span12 inset dark_nav'>
-         <%= link_to backend_landgasthaus_galleries_path, style: 'color:black' do %><div class='btn btn-inverse new_btn dark_nav_main_btn'>Zur Übersicht</div><% end -%>
-    </div>
-</div>
-<div class='form_row form_panel'>
-  <div class='inset'>
-    <%= render 'form' %>
-  </div>
-</div>
+<%= render 'form' %>
