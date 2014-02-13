@@ -30,6 +30,7 @@ gem 'quiet_assets'
 gem 'fullcalendar-rails'
 
 group :development do
+  gem 'letter_opener'
   gem 'debugger'
 end
 

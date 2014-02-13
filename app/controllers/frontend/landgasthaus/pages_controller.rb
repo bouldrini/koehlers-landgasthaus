@@ -1,15 +1,10 @@
 class Frontend::Landgasthaus::PagesController < Frontend::Landgasthaus::ApplicationController
-  def gastrokalender
-    @events = Event.all
-  end
   def hotel
   end
   def erholungundkultur
   end
   def feierlichkeiten
   end
-  def hausgemachtes
-  end
-  def kids
+  def unser_buffet
   end
 end

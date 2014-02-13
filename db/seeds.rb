@@ -1,3 +1,7 @@
+s = Statistic.new
+s.count_requests = 0
+s.save
+
 u = User.new(email: 'admin@lghk-web.de', password: 'lghk-web', password_confirmation: 'lghk-web')
 u.save
 

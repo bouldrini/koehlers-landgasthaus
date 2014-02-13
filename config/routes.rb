@@ -13,18 +13,19 @@ LandgasthausKoehler::Application.routes.draw do
       get '/hotel', to: 'pages#hotel'
       get '/erholungundkultur', to: 'pages#erholungundkultur'
       get '/feierlichkeiten', to: 'pages#feierlichkeiten'
-      get '/hausgemachtes', to: 'pages#hausgemachtes'
-      get '/kids', to: 'pages#kids'
-      get '/gastrokalender', to: 'pages#gastrokalender'
+      get '/unser_buffet', to: 'pages#unser_buffet'
     end
     namespace :catering do
       get '/allgemeines', to: 'pages#allgemeines'
       get '/gemeinschaftspflege', to: 'pages#gemeinschaftspflege'
       get '/bilder', to: 'pages#bilder'
     end
+    resources :events, only: [:show]
     get '/home', to: 'pages#home', as: :home
     get '/impressum', to: 'pages#impressum', as: :impressum
     get '/kontakt', to: 'pages#contact', as: :contact
+    post '/send_contact', to: 'api#send_contact'
+    get '/download_event_pdf', to: 'api#download_event_pdf'
     get '/anfahrt', to: 'pages#arrival', as: :arrival
   end
 

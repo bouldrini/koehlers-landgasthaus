@@ -1,2 +1,2 @@
-jQuery ($) ->
-  $('input[type=text]').minicolors()
+# jQuery ($) ->
+  # $('input[type=text]').minicolors()

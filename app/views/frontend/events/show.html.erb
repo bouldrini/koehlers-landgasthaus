@@ -1,0 +1,30 @@
+<div class='row-fluid'>
+  <div class='span12'>
+    <div class='inset'>
+      <div class='row-fluid'>
+        <div class='span12'>
+          <h3 class='brown'><%= @event.title %></h3>
+        </div>
+      </div>
+      <div class='row-fluid'>
+        <div class='span12'>
+          <%= image_tag(@event.image, style: 'width:100%') %>
+        </div>
+      </div>
+      <div class='row-fluid'>
+        <div class='span12'>
+          <div class='paragraph_text'>
+            <%= @event.subtitle.html_safe if @event.subtitle.present? %>
+          </div>
+        </div>
+      </div>
+      <div class='row-fluid'>
+        <div class='span12'>
+          <div class='paragraph_text'>
+            <%= @event.body.html_safe if @event.body.present? %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

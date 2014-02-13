@@ -10,7 +10,15 @@
                     <div class='desc_box'>
                         <h2><%= event.title %></h2>
                         <blockquote>
-                        <%= nicedate(event.start_at) %> - <%= nicedate(event.end_at) %>
+                            <p>
+                                <%= nicedate(event.start_at) %> - <%= nicedate(event.end_at) %>
+                            </p>
+                            <p>
+                                <%= link_to event.subtitle[0..50], event_path(event) %>
+                            </p>
+                            <p>
+                                <%= link_to 'Eventflyer herunterladen', download_event_pdf_path() %>
+                            </p>
                         </blockquote>
                     </div>
                 </div>

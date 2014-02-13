@@ -130,22 +130,22 @@ task :create_default_page_configuration => :environment do
   arrival.linked_to = "frontend/pages#arrival"
   arrival.save!
 
-  #GASTROKALENDER
+  # #GASTROKALENDER
 
-  gastrokalender = Contentr::LinkedPage.new()
-  gastrokalender.name = "Gastrokalender"
-  gastrokalender.slug = "landgasthaus/gastrokalender".parameterize
-  gastrokalender.menu_only = nil
-  gastrokalender.type = "Contentr::LinkedPage"
-  gastrokalender.ancestry = nil
-  gastrokalender.description = nil
-  gastrokalender.menu_title = "Gastrokalender"
-  gastrokalender.published = true
-  gastrokalender.hidden = false
-  gastrokalender.layout = "frontend_app"
-  gastrokalender.template = "default"
-  gastrokalender.linked_to = "frontend/landgasthaus/pages#gastrokalender"
-  gastrokalender.save!
+  # gastrokalender = Contentr::LinkedPage.new()
+  # gastrokalender.name = "Gastrokalender"
+  # gastrokalender.slug = "landgasthaus/gastrokalender".parameterize
+  # gastrokalender.menu_only = nil
+  # gastrokalender.type = "Contentr::LinkedPage"
+  # gastrokalender.ancestry = nil
+  # gastrokalender.description = nil
+  # gastrokalender.menu_title = "Gastrokalender"
+  # gastrokalender.published = true
+  # gastrokalender.hidden = false
+  # gastrokalender.layout = "frontend_app"
+  # gastrokalender.template = "default"
+  # gastrokalender.linked_to = "frontend/landgasthaus/pages#gastrokalender"
+  # gastrokalender.save!
 
   #ERHOLUNG & KULTUR
 
@@ -197,40 +197,6 @@ task :create_default_page_configuration => :environment do
   feierlichkeiten.template = "default"
   feierlichkeiten.linked_to = "frontend/landgasthaus/pages#feierlichkeiten"
   feierlichkeiten.save!
-
-  # Hausgemachtes
-
-  hausgemachtes = Contentr::LinkedPage.new()
-  hausgemachtes.name = "Hausgemachtes"
-  hausgemachtes.slug = "landgasthaus/hausgemachtes".parameterize
-  hausgemachtes.menu_only = nil
-  hausgemachtes.type = "Contentr::LinkedPage"
-  hausgemachtes.ancestry = nil
-  hausgemachtes.description = nil
-  hausgemachtes.menu_title = "Hausgemachtes"
-  hausgemachtes.published = true
-  hausgemachtes.hidden = false
-  hausgemachtes.layout = "frontend_app"
-  hausgemachtes.template = "default"
-  hausgemachtes.linked_to = "frontend/landgasthaus/pages#hausgemachtes"
-  hausgemachtes.save!
-
-  # KIDS
-
-  kids = Contentr::LinkedPage.new()
-  kids.name = "Kids"
-  kids.slug = "landgasthaus/kids".parameterize
-  kids.menu_only = nil
-  kids.type = "Contentr::LinkedPage"
-  kids.ancestry = nil
-  kids.description = nil
-  kids.menu_title = "Kids"
-  kids.published = true
-  kids.hidden = false
-  kids.layout = "frontend_app"
-  kids.template = "default"
-  kids.linked_to = "frontend/landgasthaus/pages#kids"
-  kids.save!
 
   # ALLGEMEINES
 
@@ -288,7 +254,7 @@ task :create_default_page_configuration => :environment do
   menu = Contentr::HtmlParagraph.new()
   menu.area_name = "nav"
   menu.position = 1
-  body = "<li><a href='/home'><i class='fa fa-home'></i>&nbsp;&nbsp;Startseite</a></li><li><a class='dropdown-toogle' data-open='false' id='landgasthaus'><i class='fa fa-chevron-down'></i>&nbsp;&nbsp;Landgasthaus</a><ul type='none' class='dropdown' id='landgasthaus'><li><a href='/landgasthaus/hotel'>Hotel</a></li><li><a href='/landgasthaus/erholungundkultur'>Erholung & Kultur</a></li><li><a href='/landgasthaus/feierlichkeiten'>Feierlichkeiten</a></li><li><a href='/landgasthaus/hausgemachtes'>Hausgemachtes</a></li><li><a href='/landgasthaus/kids'>Kids</a></li><li><a href='/landgasthaus/gastrokalender'><i class='fa fa-calendar'></i>&nbsp;&nbsp;Gastrokalender</a></li><li><a href='/anfahrt'>Anfahrt</a></li></ul></li><li><a class='dropdown-toogle' data-open='false' id='catering'><i class='fa fa-chevron-down'></i>&nbsp;&nbsp;Catering</a><ul type='none' class='dropdown' id='catering'><li><a href='/catering/allgemeines'>Allgemeines</a></li><li><a href='/catering/gemeinschaftspflege'>Gemeinschaftspflege</a></li><li><a href='/catering/bilder'>Bilder</a></li></ul><li><a href='/kontakt'>Kontakt</a></li></li><li><a href='/impressum'>Impressum</a></li>"
+  body = "<li><a href='/home'><i class='fa fa-home'></i>&nbsp;&nbsp;Startseite</a></li><li><a class='dropdown-toogle' data-open='false' id='landgasthaus'><i class='fa fa-chevron-down'></i>&nbsp;&nbsp;Landgasthaus</a><ul type='none' class='dropdown' id='landgasthaus'><li><a href='/landgasthaus/hotel'>Hotel</a></li><li><a href='/landgasthaus/erholungundkultur'>Erholung & Kultur</a></li><li><a href='/landgasthaus/feierlichkeiten'>Feierlichkeiten</a></li><li><a href='/anfahrt'>Anfahrt</a></li></ul></li><li><a class='dropdown-toogle' data-open='false' id='catering'><i class='fa fa-chevron-down'></i>&nbsp;&nbsp;Catering</a><ul type='none' class='dropdown' id='catering'><li><a href='/catering/allgemeines'>Allgemeines</a></li><li><a href='/catering/gemeinschaftspflege'>Gemeinschaftspflege</a></li><li><a href='/catering/bilder'>Bilder</a></li></ul><li><a href='/kontakt'>Kontakt</a></li></li><li><a href='/impressum'>Impressum</a></li>"
   menu.data = {"body" => body}
   menu.page = cms
   menu.save!
