@@ -130,23 +130,6 @@ task :create_default_page_configuration => :environment do
   arrival.linked_to = "frontend/pages#arrival"
   arrival.save!
 
-  # #GASTROKALENDER
-
-  # gastrokalender = Contentr::LinkedPage.new()
-  # gastrokalender.name = "Gastrokalender"
-  # gastrokalender.slug = "landgasthaus/gastrokalender".parameterize
-  # gastrokalender.menu_only = nil
-  # gastrokalender.type = "Contentr::LinkedPage"
-  # gastrokalender.ancestry = nil
-  # gastrokalender.description = nil
-  # gastrokalender.menu_title = "Gastrokalender"
-  # gastrokalender.published = true
-  # gastrokalender.hidden = false
-  # gastrokalender.layout = "frontend_app"
-  # gastrokalender.template = "default"
-  # gastrokalender.linked_to = "frontend/landgasthaus/pages#gastrokalender"
-  # gastrokalender.save!
-
   #ERHOLUNG & KULTUR
 
   erholungundkultur = Contentr::LinkedPage.new()
@@ -163,6 +146,8 @@ task :create_default_page_configuration => :environment do
   erholungundkultur.template = "default"
   erholungundkultur.linked_to = "frontend/landgasthaus/pages#erholungundkultur"
   erholungundkultur.save!
+
+  puts 'alive'
 
   # HOTEL
 
