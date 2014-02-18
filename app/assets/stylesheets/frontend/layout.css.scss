@@ -228,6 +228,10 @@ body.noscroll{
 }
 
 .footer{
+  .fb-like{
+    height:20px;
+    overflow:hidden;
+  }
   position: static;
   padding-top:15px;
   padding-bottom:15px;
