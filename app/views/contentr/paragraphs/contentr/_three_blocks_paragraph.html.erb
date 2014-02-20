@@ -1,0 +1,34 @@
+<div class='row-fluid hp'>
+  <div class='span8'>
+    <a class='page_jumper' name='<%= paragraph.data['link_title'] %>'>
+      <h3 class='brown'><%= paragraph.link_title.html_safe %></h3>
+    </a>
+    <hr/>
+    <% if paragraph.body_one.present? %>
+      <div class='row-fluid'>
+        <div class='span6'>
+          <h4 class='brown'><%= paragraph.title_one %></h4 class='brown'>
+          <%= paragraph.body_one.to_s.html_safe %>
+        </div>
+      </div>
+    <% end -%>
+    <% if paragraph.body_two.present? %>
+      <div class='row-fluid'>
+        <div class='span6'>
+          <h4 class='brown'><%= paragraph.title_two %></h4 class='brown'>
+          <%= paragraph.body_two.to_s.html_safe %>
+        </div>
+      </div>
+    <% end -%>
+    <% if paragraph.body_three.present? %>
+      <div class='row-fluid'>
+        <div class='span6'>
+          <h4 class='brown'><%= paragraph.title_three %></h4 class='brown'>
+          <%= paragraph.body_three.to_s.html_safe %>
+        </div>
+      </div>
+    <% end -%>
+  </div>
+  <div class='span4 ha' style='height:100%; overflow:hidden; background-image: url("<%= paragraph.image.url %>")'>
+  </div>
+</div>

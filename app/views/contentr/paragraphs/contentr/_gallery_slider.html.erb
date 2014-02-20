@@ -5,7 +5,7 @@
         <% Event.all.each_with_index do |event, i| %>
 
             <div class="sl-slide bg-<%= i+1 %>">
-                <div class="sl-slide-inner" style='background-image: url("<%= event.image.url %>"); background-size: 100%;'>
+                <div class="sl-slide-inner" style='background-image: url("<%= event.image.url if event.image.present? %>"); background-size: 100%;'>
                     <div class="deco" data-icon="H"></div>
                     <div class='desc_box'>
                         <h2><%= event.title %></h2>
@@ -27,16 +27,16 @@
         <% end -%>
 
 
-    <nav id="nav-arrows" class="nav-arrows">
-        <span class="nav-arrow-prev">Previous</span>
-        <span class="nav-arrow-next">Next</span>
-    </nav>
+        <nav id="nav-arrows" class="nav-arrows">
+            <span class="nav-arrow-prev">Previous</span>
+            <span class="nav-arrow-next">Next</span>
+        </nav>
 
-    <nav id="nav-dots" class="nav-dots">
-        <span class="nav-dot-current"></span>
-        <% (Event.all.count-1).times do |event| %>
-            <span></span>
-        <% end -%>
-    </nav>
-
+        <nav id="nav-dots" class="nav-dots">
+            <span class="nav-dot-current"></span>
+            <% (Event.all.count-1).times do |event| %>
+                <span></span>
+            <% end -%>
+        </nav>
+    </div>
 </div>

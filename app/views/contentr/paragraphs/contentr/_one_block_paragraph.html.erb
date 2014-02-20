@@ -1,0 +1,9 @@
+<div class='row-fluid hp'>
+  <div class='span12'>
+    <a class='page_jumper' name='<%= paragraph.data['link_title'] %>'>
+      <h3 class='brown'><%= paragraph.link_title %></h3>
+    </a>
+    <%= paragraph.body_one.html_safe %>
+  </div>
+</div>
+<%= render partial: 'contentr/paragraphs/contentr/background', locals: {paragraph: paragraph} %>

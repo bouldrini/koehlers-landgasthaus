@@ -16,6 +16,7 @@
 //= require ./navbar
 //= require ./initialize
 //= require ./footer
+//= require ./height_align
 //= require ./typographical_effects
 //= require ./modernizr.custom.79639
 //= require ./jquery.slitslider

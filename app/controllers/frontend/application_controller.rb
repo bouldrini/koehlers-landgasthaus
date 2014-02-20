@@ -15,6 +15,6 @@ class Frontend::ApplicationController < ApplicationController
 
     def globalize_page
       @page = Contentr::Page.find_by(slug: request.path[1..request.path.length].parameterize)
-      @paragraphs = @page.paragraphs.select{|p| (p.area_name == 'body' && p.body.present?)} if @page.present?
+      @paragraphs = @page.paragraphs.select{|p| (p.area_name == 'body')} if @page.present?
     end
 end

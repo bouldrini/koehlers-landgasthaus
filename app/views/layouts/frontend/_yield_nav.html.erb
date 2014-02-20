@@ -7,7 +7,7 @@
       <% @paragraphs.each do |anchor| %>
         <% if anchor.data['link_title'] != nil %>
           <% name = href = anchor.data['link_title'] %>
-          <li><a href='#<%= href %>'><%= name %></a></li>
+          <li><a href='#<%= href %>'><%= name.html_safe %></a></li>
         <% end -%>
       <% end -%>
     <% end -%>

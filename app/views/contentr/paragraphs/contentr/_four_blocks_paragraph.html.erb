@@ -1,0 +1,49 @@
+<div class='row-fluid'>
+  <div class='span12'>
+    <a class='page_jumper' name='<%= paragraph.data['link_title'] %>'>
+      <h3 class='brown'><%= paragraph.link_title.html_safe %></h3>
+    </a>
+    <hr/>
+  </div>
+</div>
+
+<div class='row-fluid hp'>
+  <div class='span6'>
+    <div class='row-fluid'>
+      <% if paragraph.body_one.present? %>
+        <div class='span8'>
+          <h4 class='brown'><%= paragraph.title_one %></h4 class='brown'>
+          <%= paragraph.body_one.to_s.html_safe %>
+        </div>
+      <% end -%>
+    </div>
+    <div class='row-fluid'>
+      <% if paragraph.body_three.present? %>
+        <div class='span8'>
+          <h4 class='brown'><%= paragraph.title_three %></h4 class='brown'>
+          <%= paragraph.body_three.to_s.html_safe %>
+        </div>
+      <% end -%>
+    </div>
+    <div class='row-fluid'>
+      <% if paragraph.body_two.present? %>
+        <div class='span8'>
+          <h4 class='brown'><%= paragraph.title_two %></h4 class='brown'>
+          <%= paragraph.body_two.to_s.html_safe %>
+        </div>
+      <% end -%>
+    </div>
+    <div class='row-fluid'>
+      <% if paragraph.body_four.present? %>
+        <div class='span8'>
+          <h4 class='brown'><%= paragraph.title_four %></h4 class='brown'>
+          <%= paragraph.body_four.to_s.html_safe %>
+        </div>
+      <% end -%>
+    </div>
+  </div>
+  <div class='span4'>
+    <%= image_tag(paragraph.image.url || paragraph.image.model['file'], style: 'width:100%') if paragraph.image_id.present? %>
+  </div>
+</div>
+

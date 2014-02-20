@@ -1,0 +1,19 @@
+<div class='row-fluid'>
+  <div class='col-lg-12'>
+    <a class='page_jumper' name='<%= paragraph.data['link_title'] %>'>
+      <h3 class='brown'><%= paragraph.link_title.html_safe %></h3>
+    </a>
+  </div>
+</div>
+<div class='row-fluid'>
+  <div class='col-lg-12'>
+    <h3><%= paragraph.subtitle_one %></h3>
+    <%= paragraph.body_one.html_safe %>
+  </div>
+</div>
+<div class='row-fluid'>
+  <div class='col-lg-12'>
+    <h3><%= paragraph.subtitle_two %></h3>
+    <%= paragraph.body_two.html_safe %>
+  </div>
+</div>

@@ -1,11 +1,13 @@
-@typographical_effects = (events) ->
-
+@typographical_effects = (banner) ->
   $(window).scrollStopped () ->
     scrollTop = $(document).scrollTop()
-    if scrollTop > $(window).height() - 55
-      pos = scrollTop - ($(window).height() - 55)
+    if banner
+      if scrollTop > $(window).height() - 55
+        pos = scrollTop - ($(window).height() - 55)
+      else
+        pos = 0
     else
-      pos = 0
+      pos = scrollTop
     $('.yield-nav').animate({
       marginTop: pos
     },1000)

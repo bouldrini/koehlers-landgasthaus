@@ -39,7 +39,7 @@
         <div id='content-wrapper'>
           <%= render partial: 'layouts/frontend/nav' %>
           <div class='yield-container'>
-            <h3 class='brown'><%= content_for :icon %>&nbsp;<%= content_for :title %></h3>
+            <h2 class='brown'><%= content_for :icon %><%= content_for :title %></h3>
             <%= yield %>
             <%= contentr_area :body %>
             </div>

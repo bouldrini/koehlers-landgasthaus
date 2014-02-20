@@ -1,5 +1,5 @@
 <% content_for :icon do %>
-  <%= fa_icon 'home 2x' %>
+  <%= fa_icon 'home 2x' %>&nbsp;
 <% end -%>
 <% content_for :title do %>
   Startseite
@@ -7,24 +7,7 @@
 
 <script type="text/javascript">
   jQuery(function($){
-    events = [
-      <% if @events.present? %>
-        <% @events.each_with_index do |e, i| %>
-          {
-          id: "<%= e.id %>",
-          title: "<%= e.title %>",
-          subtitle: "<%= e.subtitle %>",
-          start_at: "<%= nicedate(e.start_at) %>",
-          end_at: "<%= nicedate(e.end_at) %>",
-          image: "<%= e.image_url %>",
-          body: "<%= e.body.present? ? e.body.html_safe : '' %>",
-          highlight: "<%= e.highlight %>"
-          }
-          <%= ',' unless i >= (@events.length + 1) %>
-        <% end %>
-      <% end -%>
-    ];
-    typographical_effects(events);
+    typographical_effects(true);
 
     scroll_scroller = function(){
       $('body').removeClass('noScroll')

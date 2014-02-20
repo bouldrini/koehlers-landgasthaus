@@ -149,6 +149,11 @@ body{
 .background-image{
   width:100%;
 }
+
+.side_image{
+  height:100%;
+}
+
 .transparent{
   border-top-color: $primaryColor;
   border-top-style: solid;
@@ -223,6 +228,7 @@ body.noscroll{
 .nav-helper{
   display: block;
   float: left;
+  margin-left:29px;
   height: 10px;
   width: 230px;
 }
@@ -318,8 +324,19 @@ body.noscroll{
   border-left:1px solid black;
 }
 #content-wrapper{
+  h2.brown{
+    color: #5D421D;
+  }
+  h4.brown{
+    color: darken(#5D421D,10%);
+  }
+  // hr{
+  //   margin-top:0px;
+  // }
   h3.brown{
     color: #5D421D;
+    // min-height: 80px;
+    // line-height: 80px;
   }
   .yield-nav{
     padding-bottom:15px;
