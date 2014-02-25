@@ -26,7 +26,7 @@ gem 'tabulatr2', git: 'https://github.com/provideal/tabulatr2'
 gem 'carrierwave', '~> 0.8.0'
 gem 'chosen-rails', "~> 1.0.0"
 gem 'iconv'
-gem 'compass-rails', '> 1.1.3'
+gem 'compass-rails', '~> 1.1.3'
 gem 'quiet_assets'
 gem 'fullcalendar-rails'
 
