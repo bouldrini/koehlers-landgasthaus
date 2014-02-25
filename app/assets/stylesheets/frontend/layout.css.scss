@@ -5,12 +5,14 @@
 }
 
 .sl-slide-inner{
+  position: relative;
+  width:100%;
+  padding:15px;
   .desc_box{
     color:$textColor;
-    margin-left:15px;
-    margin-top:15px;
     background-color:rgba(#C3C3C3, 0.7);
-    width:400px;
+    width:100%;
+    max-height:400px;
     padding:15px;
   }
 }
@@ -333,6 +335,9 @@ body.noscroll{
   // hr{
   //   margin-top:0px;
   // }
+  b.brown{
+    color: #5D421D;
+  }
   h3.brown{
     color: #5D421D;
     // min-height: 80px;
