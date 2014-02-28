@@ -140,6 +140,17 @@ task :create_default_page_configuration => :environment do
   erholungundkultur.linked_to = "frontend/landgasthaus/pages#erholungundkultur"
   erholungundkultur.save!
 
+  domfestspiele = Contentr::OneBlockParagraph.new()
+  domfestspiele.area_name = "body"
+  domfestspiele.position = 1
+  body = "<p>Kleine Stadt mit der gro&szlig;en Geschichte: Im Jahr 852 wurde unter Sachsenherzog Liudolf der Bau des Kanonissenstifts beschlossen und damit der Grundstein f&uuml;r die erfolgreiche Geschichte Gandersheims gelegt. </p><p>Ihre erste Bl&uuml;tezeit erlebte die Siedlung ungef&auml;hr hundert Jahre nach der Gr&uuml;ndung, in einer Zeit, in der auch die erste deutsche Dichterin Roswitha von Gandersheim gelebt hat. Als &Auml;btissin verfasste sie geistliche Schriften, historische Dichtungen und Dramen. Auf Roswitha von Gandersheim geht auch der Roswitha-Preis zur&uuml;ck, der &auml;lteste deutschsprachige Literaturpreis, mit dem Frauen f&uuml;r herausragende literarische Einzelleistungen ausgezeichnet werden. Unter den Preistr&auml;gerinnen findet man Namen wie Ruth Kl&uuml;ger, Ulla Hahn, Herta M&uuml;ller oder Cornelia Funke. </p><p>1878 wurde in der Stadt das erste Solebad er&ouml;ffnet und so der Weg zum Kurort geebnet. Neben dem B&auml;derbetrieb ist Bad Gandersheim seit 54 Jahren bundesweit auch f&uuml;r seine Theater-Festspiele bekannt. 1952 wurde im Rahmen der 1.100-Jahrfeier der Stadt &raquo;Das Lied von Gandersheim&laquo; auf dem Marktplatz inszeniert. Sieben Jahre sp&auml;ter fanden die ersten Domfestspiele in der heute bekannten Form vor dem Dom statt. Standen in der ersten Zeit noch deutsche Klassiker im Mittelpunkt der Inszenierungen, wurden nach ungef&auml;hr zehn Jahren auch Kom&ouml;dien ins Programm aufgenommen. In den siebziger Jahren erlebte das Programm eine weitere Neuerung. Jetzt wurden vor dem Portal auch Musicals gegeben.  1982 entschied man sich zum ersten Mal ein Kinderst&uuml;ck aufzuf&uuml;hren: Der R&auml;uber Hotzenplotz, der auch im Jahr 2012 auf der Domb&uuml;hne zu sehen war. </p><p>Dass die Gandersheimer Domfestspiele sich bundesweit eines guten Rufs erfreuen, zeigt auch die prominente Liste der Schauspieler, die vor dem Dom auf der B&uuml;hne standen. Namen wie Theo Lingen, Ren&eacute; Kollo, Gustav Fr&ouml;hlich, Anja Kruse, Ralf Wolter, Thekla Carola Wied oder Dietmar B&auml;r sind nur einige auf einer langen und beeindruckenden Liste. </p><p>Weitere Informationen erhalten Sie:  Touristinfo Bad Gandersheim  Stiftsfreiheit 12 37581 Bad Gandersheim  Telefon: 05382 &ndash; 73700 Fax: 05382 &ndash; 73770 tourist@bad-gandersheim.de http://www.bad-gandersheim.de</p>"
+  domfestspiele.data = {"title_one" => "DIE DOMFESTSPIELE 1161 Jahre Bad Gandersheim - 55 Jahre Gandersheimer Domfestspiele","body_one" => body, "link_title" => "Schlemmen unter'm Schindeldach"}
+  domfestspiele.page = erholungundkultur
+  domfestspiele.save!
+  domfestspiele.publish!
+
+
+
   # HOTEL
 
   hotel = Contentr::LinkedPage.new()
