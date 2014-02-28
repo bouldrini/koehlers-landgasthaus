@@ -2,16 +2,15 @@
   $(window).scrollStopped () ->
     scrollTop = $(document).scrollTop()
     if banner
-      if scrollTop > $(window).height() - 55
-        pos = scrollTop - ($(window).height() - 55)
+      if scrollTop > $(window).height() - 55 + 300
+        pos = scrollTop - ($(window).height() - 55) - 180
       else
         pos = 0
     else
-
-    if scrollTop <= 0
-      pos = scrollTop
-    else
-      pos = scrollTop - 300
+      if scrollTop <= 300
+        pos = 0
+      else
+        pos = scrollTop - 300
     $('.yield-nav').animate({
       marginTop: pos
     },1000)
