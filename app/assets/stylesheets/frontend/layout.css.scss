@@ -11,9 +11,14 @@
   .desc_box{
     color:$textColor;
     background-color:rgba(#C3C3C3, 0.7);
-    width:100%;
     max-height:400px;
+    width:600px;
     padding:15px;
+  }
+  @media all and (max-width: $tabletSnap){
+    .desc_box{
+      width:100%;
+    }
   }
 }
 
@@ -325,6 +330,9 @@ body.noscroll{
   border-right:1px solid black;
   border-left:1px solid black;
 }
+b.brown{
+  color: #5D421D !important;
+}
 #content-wrapper{
   h2.brown{
     color: #5D421D;
@@ -335,9 +343,6 @@ body.noscroll{
   // hr{
   //   margin-top:0px;
   // }
-  b.brown{
-    color: #5D421D;
-  }
   h3.brown{
     color: #5D421D;
     // min-height: 80px;

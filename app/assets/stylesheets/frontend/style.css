@@ -6,6 +6,8 @@
 }
 
 .sl-slider {
+	width:100%;
+	height:600px;
 	position: absolute;
 	top: 0;
 	left: 0;

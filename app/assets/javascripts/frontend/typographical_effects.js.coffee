@@ -7,7 +7,11 @@
       else
         pos = 0
     else
+
+    if scrollTop <= 0
       pos = scrollTop
+    else
+      pos = scrollTop - 300
     $('.yield-nav').animate({
       marginTop: pos
     },1000)
