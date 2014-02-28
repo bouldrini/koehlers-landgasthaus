@@ -14,7 +14,7 @@
                                 <%= nicedate(event.start_at) %> - <%= nicedate(event.end_at) %>
                             </p>
                             <p>
-                                <%= link_to event.subtitle[0..50], event_path(event) %>
+                                <%= link_to event.subtitle.html_safe, event_path(event) %>
                             </p>
                             <p>
                                 <%= link_to 'Eventflyer herunterladen', download_event_pdf_path() %>
