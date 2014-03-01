@@ -28,7 +28,6 @@ class Default < ActiveRecord::Migration
 
     create_table :events do |t|
       t.string    :title
-      t.string    :type
       t.string    :area
       t.string    :subtitle
       t.datetime  :start_at

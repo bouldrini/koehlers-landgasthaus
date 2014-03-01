@@ -2,7 +2,6 @@ class EventTabulatrData < Tabulatr::Data
   search :title
   column :id
   column :title
-  column :type
   column :image do |rec|
     if rec.image.present?
       image_tag rec.image.thumb

@@ -14,11 +14,7 @@ class Backend::Catering::EventsController < Backend::Catering::ApplicationContro
     @event = Event.find(params[:id])
   end
   def create
-    if event_params[:type] == 'Collage'
-      event = Collage.new(event_params)
-    elsif event_params[:type] == 'Flyer'
-      event = Flyer.new(event_params)
-    end
+    event = Event.new
     event.area = 'catering'
     event.active = true
     if event.save
