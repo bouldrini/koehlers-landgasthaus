@@ -83,4 +83,7 @@ event.body = "<p>Der kulinarische Weihnachtsklassiker für die ganze Familie!</p
 event.end_at = Time.zone.parse("2014-12-26 00:00:00")
 event.save
 
-
+Event.all.each do |event|
+  event.area = 'landgasthaus'
+  event.save
+end

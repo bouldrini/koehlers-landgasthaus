@@ -7,7 +7,7 @@ class EventTabulatrData < Tabulatr::Data
     if rec.image.present?
       image_tag rec.image.thumb
     else
-      'foo'
+      '-'
     end
   end
   column :actions do |rec|
