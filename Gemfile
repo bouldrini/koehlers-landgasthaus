@@ -16,7 +16,7 @@ gem 'thin'
 gem 'jquery-minicolors-rails'
 gem 'jquery-rails'
 gem 'rails-i18n'
-gem "fog", "~> 1.3.1"
+gem "fog"
 gem 'mini_magick'
 gem 'gmaps4rails', '1.5.6'
 gem 'devise'
