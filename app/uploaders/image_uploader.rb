@@ -3,9 +3,8 @@ class ImageUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
-  storage :fog
-
   include CarrierWave::MimeTypes
+  storage :fog
   process :set_content_type
 
   def store_dir
